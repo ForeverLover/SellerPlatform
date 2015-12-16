@@ -3,4 +3,17 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="dp_five">5dp</dimen>
+    <dimen name="dp_ten">10dp</dimen>
+    <dimen name="dp_twenty">20dp</dimen>
+    <dimen name="dp_thirty">30dp</dimen>
+    <dimen name="dp_sixty">60dp</dimen>
+    <dimen name="dp_eighty">80dp</dimen>
+
+
+    <dimen name="sp_eighteen">18sp</dimen>
+
+
 </resources>
