@@ -2,6 +2,9 @@
     <string name="app_name">SellerPlatform</string>
     <string name="action_settings">Settings</string>
 
+    <string name="data_error">数据错误</string>
+    <string name="alter_succeed">修改成功</string>
+
 
     <!--tab标签-->
     <string name="tab_dynamic">動態</string>
@@ -17,4 +20,39 @@
 
     <!--登录-->
     <string name="login_submit">登錄</string>
+
+    <!--設定-->
+    <string name="settings_alter">編輯</string>
+    <string name="settings_id">ID</string>
+    <string name="settings_addr">地址</string>
+    <string name="settings_link">聯絡電話</string>
+    <string name="settings_onTime">營業時間</string>
+    <string name="settings_web">網站</string>
+    <string name="settings_remark">備註</string>
+    <string name="settings_card">名片訊息</string>
+
+    <string name="settings_merchant_name">店名</string>
+    <string name="settings_merchant_name_vice">副標題</string>
+    <string name="settings_merchant_save">儲存</string>
+
+    <!--账户-->
+    <string name="account_title">賬戶設定</string>
+    <string name="merchant_id">ID</string>
+    <string name="account_no">登入賬號</string>
+    <string name="account_pwd">登入密碼</string>
+    <string name="account_update_pwd">更變密碼</string>
+    <string name="account_phone">手機號碼</string>
+    <string name="account_op_pwd">操作員登入密碼</string>
+    <string name="account_tip_one">*設定操作員密碼分享部分權限予夥伴共同管理，使用操作員密碼登入 權限將受若干限制</string>
+    <string name="account_tip_two">X賬戶設定\nX變更密碼\nX店家資訊編輯\nX選單菜單編輯</string>
+    <string name="account_cancel">取消</string>
+    <string name="account_ensure">確認</string>
+
+    <!--變更密碼-->
+    <string name="alter_pwd_title">變更密碼</string>
+    <string name="alter_pwd_new">新的密碼</string>
+    <string name="alter_pwd_repeat">再次填入</string>
+    <string name="alter_pwd_null">請填入新密碼</string>
+    <string name="alter_confpwd_null">請再次填入密碼</string>
+    <string name="alter_confpwd_eror">兩次填入密碼不一致，請核實</string>
 </resources>

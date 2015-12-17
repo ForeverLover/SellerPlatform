@@ -65,6 +65,7 @@ public class DynamicActivity extends BaseActivity implements CompoundButton.OnCh
     @Override
     public void initListener() {
         super.initListener();
+
         dynamic_cb.setOnCheckedChangeListener(this);
         dynamic_viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

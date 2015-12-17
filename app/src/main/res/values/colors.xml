@@ -9,4 +9,7 @@
 
     <color name="tab_colo_checked">#20bafb</color>
     <color name="tab_colo_uncheck">#686868</color>
+
+    <color name="et_hint_color">#666666</color>
+    <color name="light_gray">#999999</color>
 </resources>

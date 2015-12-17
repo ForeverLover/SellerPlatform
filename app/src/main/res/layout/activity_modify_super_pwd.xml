@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_thirty">
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_twenty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alter_pwd_title"
+        android:textSize="@dimen/sp_twenty"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_fifty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_twenty"
+        android:paddingRight="@dimen/dp_twenty">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_weight="2"
+                android:layout_width="@dimen/dp_zero"
+                android:layout_height="wrap_content"
+                android:text="@string/alter_pwd_new"
+                android:textSize="@dimen/sp_sixteen"/>
+
+            <EditText
+                android:id="@+id/pwd_first_et"
+                android:paddingTop="@dimen/dp_five"
+                android:paddingBottom="@dimen/dp_five"
+                android:layout_width="@dimen/dp_zero"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_sixteen"
+                android:background="@color/light_gray"
+                android:layout_weight="3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_twenty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_weight="2"
+                android:layout_width="@dimen/dp_zero"
+                android:layout_height="wrap_content"
+                android:text="@string/alter_pwd_repeat"
+                android:textSize="@dimen/sp_sixteen"/>
+
+            <EditText
+                android:id="@+id/pwd_second_et"
+                android:paddingTop="@dimen/dp_five"
+                android:paddingBottom="@dimen/dp_five"
+                android:layout_width="@dimen/dp_zero"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_sixteen"
+                android:background="@color/light_gray"
+                android:layout_weight="3"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_thirty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/pwd_cancel_btn"
+            android:textColor="@color/tab_colo_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_cancel"
+            android:paddingLeft="@dimen/dp_twenty"
+            android:paddingRight="@dimen/dp_twenty"
+            android:paddingBottom="@dimen/dp_five"
+            android:paddingTop="@dimen/dp_five"
+            android:background="@color/white"/>
+        <TextView
+            android:id="@+id/pwd_ensure_btn"
+            android:layout_marginLeft="@dimen/dp_five"
+            android:background="@color/tab_colo_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_cancel"
+            android:paddingLeft="@dimen/dp_twenty"
+            android:paddingRight="@dimen/dp_twenty"
+            android:paddingBottom="@dimen/dp_five"
+            android:paddingTop="@dimen/dp_five"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>
+
+

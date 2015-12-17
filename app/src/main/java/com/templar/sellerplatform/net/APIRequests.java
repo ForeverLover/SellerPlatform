@@ -21,5 +21,15 @@ public class APIRequests extends BaseAPIRequest implements IAPIRequests {
         request(XRequestCallBack, Tasks.LOGIN, "/login", requestParams, null);
     }
 
+    @Override
+    public void alterAdministrator() {
+
+    }
+
+    @Override
+    public void alterMerchant() {
+
+    }
+
 
 }

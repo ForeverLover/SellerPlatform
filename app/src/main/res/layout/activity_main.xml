@@ -18,6 +18,7 @@
 
 
             <FrameLayout
+                android:layout_above="@android:id/tabs"
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></FrameLayout>

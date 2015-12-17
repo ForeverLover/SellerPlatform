@@ -7,8 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.blueware.agent.android.BlueWare;
 import com.lidroid.xutils.ViewUtils;
 import com.templar.sellerplatform.net.XRequestCallBack;
+import com.templar.sellerplatform.utils.Constants;
 
 /**
  * 项目:SellerPlatform
@@ -24,6 +26,7 @@ public class BaseActivity extends AppCompatActivity implements XRequestCallBack,
         super.onCreate(savedInstanceState);
         destroyed = false;
         AppManager.getInstance().addActivity(this);
+        BlueWare.withApplicationToken(Constants.Key.ONE_APM).start(this.getApplication());
     }
 
     protected void init() {

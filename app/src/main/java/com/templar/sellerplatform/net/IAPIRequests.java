@@ -13,5 +13,13 @@ public interface IAPIRequests {
      */
     void login(String phone, String pswd);
 
+    /**
+     * 修改管理員信息
+     */
+    void alterAdministrator();
 
+    /**
+     * 修改商鋪資料
+     */
+    void alterMerchant();
 }

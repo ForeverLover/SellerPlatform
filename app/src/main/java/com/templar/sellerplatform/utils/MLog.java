@@ -33,4 +33,8 @@ public class MLog {
         if (isLogable())
             Log.d(tag, msg);
     }
+    public static void v(String tag, String msg) {
+        if (isLogable())
+            Log.v(tag, msg);
+    }
 }
