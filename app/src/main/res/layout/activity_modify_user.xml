@@ -179,7 +179,7 @@
                 android:background="@color/tab_colo_checked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/account_cancel"
+                android:text="@string/account_ensure"
                 android:paddingLeft="@dimen/dp_twenty"
                 android:paddingRight="@dimen/dp_twenty"
                 android:paddingBottom="@dimen/dp_five"

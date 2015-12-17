@@ -28,6 +28,7 @@ public class ModifySuperPasswordActivity extends BaseActivity {
 
 
     private String pwd;
+    private String confpwd;
     private String tips;
 
     private boolean isFinished;
@@ -41,7 +42,7 @@ public class ModifySuperPasswordActivity extends BaseActivity {
     @Override
     public void initData() {
         super.initData();
-        isFinished=false;
+        isFinished = false;
     }
 
     @Override
@@ -56,14 +57,26 @@ public class ModifySuperPasswordActivity extends BaseActivity {
     private void alterSuperPwd(View v) {
         switch (v.getId()) {
             case R.id.pwd_ensure_btn:
-                if (isFinished) {
-                    Intent intent = new Intent();
-                    intent.putExtra(Constants.Intent.Variable.ADMINISTRATOR_SUPER_PWD, pwd);
-                    setResult(RESULT_OK, intent);
-                    finish();
-                }else{
-                    showToast(tips);
+                pwd = pwd_first_et.getText() != null ? pwd_first_et.getText().toString() : "";
+                confpwd = pwd_second_et.getText() != null ? pwd_second_et.getText().toString() : "";
+                if (StringUtils.isEmpty(pwd)) {
+                    showToast(getString(R.string.alter_pwd_null));
+                    return;
                 }
+                if (StringUtils.isEmpty(confpwd)) {
+                    showToast(getString(R.string.alter_confpwd_null));
+                    return;
+                }
+                if (!pwd.equals(confpwd)) {
+                    showToast( getString(R.string.alter_confpwd_eror));
+                    return;
+                }
+
+                Intent intent = new Intent();
+                intent.putExtra(Constants.Intent.Variable.ADMINISTRATOR_SUPER_PWD, pwd);
+                setResult(RESULT_OK, intent);
+                finish();
+
             case R.id.pwd_cancel_btn:
                 finish();
                 break;
@@ -94,25 +107,13 @@ public class ModifySuperPasswordActivity extends BaseActivity {
             String text = s != null ? s.toString() : "";
             switch (resId) {
                 case R.id.pwd_first_et:
-                    if (!StringUtils.isEmpty(text)) {
-                        tips=getString(R.string.alter_pwd_null);
-                        showToast(tips);
-                        return;
-                    }
+
                     pwd = text;
                     break;
                 case R.id.pwd_second_et:
-                    if (StringUtils.isEmpty(text)) {
-                        tips=getString(R.string.alter_confpwd_null);
-                        showToast(tips);
-                        return;
-                    }
-                    if (!pwd.equals(text)) {
-                        tips=getString(R.string.alter_confpwd_eror);
-                        showToast(tips);
-                        return;
-                    }
-                    isFinished=true;
+                    confpwd = text;
+
+                    isFinished = true;
                     break;
             }
         }

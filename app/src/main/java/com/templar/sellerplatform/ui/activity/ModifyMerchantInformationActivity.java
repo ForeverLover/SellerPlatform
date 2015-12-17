@@ -104,8 +104,8 @@ public class ModifyMerchantInformationActivity extends BaseActivity {
             intent.putExtra(Constants.Intent.Variable.MERCHANT_INFO, originInformation);
             MLog.v("Tag", "after-edit_before-finish:" + originInformation.getMerchant_name_vice());
             setResult(RESULT_OK,intent);
-            finish();
         }
+        finish();
 
 
     }
