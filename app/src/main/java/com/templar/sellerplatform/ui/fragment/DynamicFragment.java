@@ -1,7 +1,9 @@
-package com.templar.sellerplatform.ui.activity;
+package com.templar.sellerplatform.ui.fragment;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
@@ -9,17 +11,17 @@ import android.widget.RadioGroup;
 
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.templar.sellerplatform.R;
-import com.templar.sellerplatform.config.BaseActivity;
+import com.templar.sellerplatform.config.BaseFragment;
 import com.templar.sellerplatform.ui.adapter.DynamicPagerAdapter;
 import com.templar.sellerplatform.widget.PageIndicator;
 
 /**
  * 项目:SellerPlatform
  * 作者：Hi-Templar
- * 创建时间：2015/12/16 17:10
- * 描述：$TODO
+ * 创建时间：2015/12/18 11:18
+ * 描述：${TODO}
  */
-public class DynamicActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener {
+public class DynamicFragment extends BaseFragment implements CompoundButton.OnCheckedChangeListener{
     @ViewInject(R.id.dynamic_viewpager)
     private ViewPager dynamic_viewpager;
     @ViewInject(R.id.dynamic_content_indicatore)
@@ -42,15 +44,24 @@ public class DynamicActivity extends BaseActivity implements CompoundButton.OnCh
     private DynamicPagerAdapter dynamicPagerAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_dynamic);
+    protected int getViewLayoutId() {
+        return R.layout.fragment_dynamic;
     }
+
+    @Override
+    protected void onCreateView(View contentView, Bundle savedInstanceState, LayoutInflater inflater) {
+
+    }
+
+
+
+
 
     @Override
     public void initData() {
         super.initData();
-        dynamicPagerAdapter = new DynamicPagerAdapter(getSupportFragmentManager());
+//        super.getActivity().getSupportFragmentManager()
+        dynamicPagerAdapter = new DynamicPagerAdapter(getActivity().getSupportFragmentManager());
     }
 
     @Override
@@ -126,32 +137,6 @@ public class DynamicActivity extends BaseActivity implements CompoundButton.OnCh
 
     }
 
-//    @OnClick({R.id.dynamic_notice_btn, R.id.dynamic_deal_btn, R.id.dynamic_wait_btn, R.id.dynamic_end_btn})
-//    private void changeLayout(View v) {
-//        dynamic_notice_btn.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
-//        dynamic_deal_btn.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
-//        dynamic_wait_btn.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
-//        dynamic_end_btn.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
-//        switch (v.getId()) {
-//            case R.id.dynamic_notice_btn:
-//                dynamic_viewpager.setCurrentItem(0);
-//                dynamic_notice_btn.setTextColor(getResources().getColor(R.color.tab_colo_checked));
-//                break;
-//            case R.id.dynamic_deal_btn:
-//                dynamic_deal_btn.setTextColor(getResources().getColor(R.color.tab_colo_checked));
-//                dynamic_viewpager.setCurrentItem(1);
-//                break;
-//            case R.id.dynamic_wait_btn:
-//                dynamic_wait_btn.setTextColor(getResources().getColor(R.color.tab_colo_checked));
-//                dynamic_viewpager.setCurrentItem(2);
-//                break;
-//            case R.id.dynamic_end_btn:
-//                dynamic_end_btn.setTextColor(getResources().getColor(R.color.tab_colo_checked));
-//                dynamic_viewpager.setCurrentItem(3);
-//                break;
-//        }
-//
-//    }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

@@ -1,9 +1,12 @@
-package com.templar.sellerplatform.ui.activity;
+package com.templar.sellerplatform.ui.fragment;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -14,23 +17,27 @@ import android.widget.TextView;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 import com.templar.sellerplatform.R;
-import com.templar.sellerplatform.config.BaseActivity;
+import com.templar.sellerplatform.config.BaseFragment;
 import com.templar.sellerplatform.entity.MerchantInformation;
 import com.templar.sellerplatform.listener.MyTabActivityResultListener;
 import com.templar.sellerplatform.parser.MerchantParser;
+import com.templar.sellerplatform.ui.activity.ModifyMerchantInformationActivity;
+import com.templar.sellerplatform.ui.activity.ModifyUserInformationActivity;
 import com.templar.sellerplatform.utils.Constants;
 import com.templar.sellerplatform.utils.DensityUtil;
 import com.templar.sellerplatform.utils.MImageLoader;
+import com.templar.sellerplatform.utils.MLog;
 import com.templar.sellerplatform.utils.StringUtils;
 import com.templar.sellerplatform.widget.CornerImageView;
 
 /**
  * 项目:SellerPlatform
  * 作者：Hi-Templar
- * 创建时间：2015/12/16 17:14
- * 描述：$TODO
+ * 创建时间：2015/12/18 11:21
+ * 描述：${todo}
  */
-public class SettingsActivity extends BaseActivity implements MyTabActivityResultListener {
+public class SettingsFragment extends BaseFragment implements MyTabActivityResultListener {
+
     @ViewInject(R.id.merchant_title_layout)
     private RelativeLayout merchant_title_layout;
     @ViewInject(R.id.merchant_img_iv)
@@ -65,20 +72,25 @@ public class SettingsActivity extends BaseActivity implements MyTabActivityResul
     private MerchantInformation information;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_settings);
+    protected int getViewLayoutId() {
+        return R.layout.fragment_settings;
     }
+
+    @Override
+    protected void onCreateView(View contentView, Bundle savedInstanceState, LayoutInflater inflater) {
+
+    }
+
 
     @Override
     public void initData() {
         super.initData();
-        windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+        windowManager = (WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE);
         displayMetrics = new DisplayMetrics();
         windowManager.getDefaultDisplay().getMetrics(displayMetrics);
 
         rlParams = new RelativeLayout.LayoutParams(displayMetrics.widthPixels, displayMetrics.widthPixels * 9 / 16);
-        llParams = new LinearLayout.LayoutParams(displayMetrics.widthPixels, displayMetrics.widthPixels * 9 / 16 + DensityUtil.dip2px(this, 50));
+        llParams = new LinearLayout.LayoutParams(displayMetrics.widthPixels, displayMetrics.widthPixels * 9 / 16 + DensityUtil.dip2px(getActivity(), 50));
 
         information = MerchantParser.getInstance().parseMerchantInfo();
         setData();
@@ -87,8 +99,8 @@ public class SettingsActivity extends BaseActivity implements MyTabActivityResul
 
     public void setData() {
         if (information != null) {
-            MImageLoader.getInstance(this).displayImage(information.getMerchant_bg(), merchant_img_iv);
-            merchant_name_tv.setText(StringUtils.getMerchantNameStr(information.getMerchant_name() + " -" + information.getMerchant_name_vice(), information.getMerchant_name().length(), this, 20, 14));
+            MImageLoader.getInstance(getActivity()).displayImage(information.getMerchant_bg(), merchant_img_iv);
+            merchant_name_tv.setText(StringUtils.getMerchantNameStr(information.getMerchant_name() + " -" + information.getMerchant_name_vice(), information.getMerchant_name().length(), getActivity(), 20, 14));
             settings_id_tv.setText(information.getMerchant_id());
             settings_addr_tv.setText(information.getMerchant_addr());
             settings_link_tv.setText(information.getMerchant_link());
@@ -111,10 +123,10 @@ public class SettingsActivity extends BaseActivity implements MyTabActivityResul
     private void operate(View v) {
         switch (v.getId()) {
             case R.id.settings_modify_layout:
-                getParent().startActivityForResult(new Intent(SettingsActivity.this, ModifyMerchantInformationActivity.class).putExtra(Constants.Intent.Variable.MERCHANT_INFO, information), Constants.Code.MODIFY_MERCHANT);
+                getActivity().startActivityForResult(new Intent(getActivity(), ModifyMerchantInformationActivity.class).putExtra(Constants.Intent.Variable.MERCHANT_INFO, information), Constants.Code.MODIFY_MERCHANT);
                 break;
             case R.id.merchant_logo_iv:
-                startActivity(ModifyUserInformationActivity.class);
+                getActivity().startActivity(new Intent(getActivity(), ModifyUserInformationActivity.class));
                 break;
         }
     }
@@ -122,7 +134,7 @@ public class SettingsActivity extends BaseActivity implements MyTabActivityResul
 
     @Override
     public void onTabActivityResult(int requestCode, int resultCode, Intent data) {
-        if (RESULT_OK == resultCode && data != null) {
+        if (getActivity().RESULT_OK == resultCode && data != null) {
             switch (requestCode) {
                 case Constants.Code.MODIFY_MERCHANT:
                     information = (MerchantInformation) data.getSerializableExtra(Constants.Intent.Variable.MERCHANT_INFO);
@@ -130,5 +142,83 @@ public class SettingsActivity extends BaseActivity implements MyTabActivityResul
                     break;
             }
         }
+    }
+
+
+
+
+    @Override
+    public void onAttach(Activity activity) {
+
+        super.onAttach(activity);
+        Log.i(TAG, "onAttach");
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.i(TAG, "onCreate");
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        MLog.i(TAG, "onViewCreated");
+        super.onViewCreated(view, savedInstanceState);
+    }
+
+    @Override
+
+    public void onDestroy() {
+        MLog.i(TAG, "onDestroy");
+        super.onDestroy();
+    }
+
+    @Override
+    public void onDetach() {
+        MLog.i(TAG, "onDetach");
+        super.onDetach();
+    }
+
+    @Override
+    public void onDestroyView() {
+        MLog.i(TAG, "onDestroyView");
+        super.onDestroyView();
+    }
+
+    @Override
+    public void onStart() {
+        MLog.i(TAG, "onStart");
+        super.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        MLog.i(TAG, "onStop");
+        super.onStop();
+    }
+
+    @Override
+    public void onResume() {
+        MLog.i(TAG, "onResume");
+        super.onResume();
+
+
+    }
+
+    @Override
+    public void onPause() {
+        MLog.i(TAG, "onPause");
+        super.onPause();
+    }
+
+
+    @Override
+
+
+    public void onActivityCreated(Bundle savedInstanceState) {
+        MLog.i(TAG, "onActivityCreated");
+        super.onActivityCreated(savedInstanceState);
+
+
     }
 }

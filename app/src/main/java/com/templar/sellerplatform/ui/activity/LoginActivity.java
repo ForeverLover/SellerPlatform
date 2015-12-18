@@ -33,6 +33,7 @@ public class LoginActivity extends BaseActivity {
     @OnClick(R.id.login_submit_btn)
     private void doLogin(View v) {
         if (R.id.login_submit_btn == v.getId())
-            startActivity(MainActivity.class);
+            startActivity(HomeActivity.class);
+//            startActivity(MainActivity.class);
     }
 }

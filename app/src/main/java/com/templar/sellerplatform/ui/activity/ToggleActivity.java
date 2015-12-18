@@ -15,6 +15,6 @@ public class ToggleActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_toggle);
+        setContentView(R.layout.fragment_toggle);
     }
 }

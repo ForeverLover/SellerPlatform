@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/main_bg"
+    android:background="@drawable/page_bg"
     android:orientation="vertical"
     android:padding="@dimen/dp_thirty">
 
@@ -39,7 +39,7 @@
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
-                android:background="@color/light_gray"
+                android:background="@color/et_bg"
                 android:layout_weight="3"/>
         </LinearLayout>
 
@@ -63,7 +63,7 @@
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
-                android:background="@color/light_gray"
+                android:background="@color/et_bg"
                 android:layout_weight="3"/>
         </LinearLayout>
     </LinearLayout>
@@ -84,11 +84,11 @@
             android:paddingRight="@dimen/dp_twenty"
             android:paddingBottom="@dimen/dp_five"
             android:paddingTop="@dimen/dp_five"
-            android:background="@color/white"/>
+            android:background="@drawable/btn_comment_bg"/>
         <TextView
             android:id="@+id/pwd_ensure_btn"
             android:layout_marginLeft="@dimen/dp_five"
-            android:background="@color/tab_colo_checked"
+            android:background="@drawable/btn_special_bg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/account_ensure"

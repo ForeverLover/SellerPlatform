@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:fillViewport="true"
     android:scrollbars="none"
-    android:background="@mipmap/main_bg"
+    android:background="@drawable/page_bg"
     android:layout_height="match_parent">
     <LinearLayout
         android:paddingLeft="@dimen/dp_twenty"
@@ -28,7 +28,7 @@
                 android:layout_width="@dimen/dp_zero"
                 android:textSize="@dimen/sp_sixteen"
                 android:layout_height="wrap_content"
-                android:background="@color/light_gray"/>
+                android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_fifteen"
@@ -47,7 +47,7 @@
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
-                android:background="@color/light_gray"/>
+                android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_fifteen"
@@ -84,7 +84,7 @@
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
-                android:background="@color/light_gray"/>
+                android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_fifteen"
@@ -103,7 +103,7 @@
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
-                android:background="@color/light_gray"/>
+                android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_fifteen"
@@ -122,7 +122,7 @@
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
-                android:background="@color/light_gray"/>
+                android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_fifteen"
@@ -141,7 +141,7 @@
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
-                android:background="@color/light_gray"/>
+                android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_fifteen"
@@ -160,7 +160,7 @@
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
-                android:background="@color/light_gray"/>
+                android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_fifteen"
@@ -179,7 +179,7 @@
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
-                android:background="@color/light_gray"/>
+                android:background="@color/et_bg"/>
         </LinearLayout>
 
         <TextView
@@ -196,7 +196,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_gravity="center_horizontal"
-            android:background="@color/tab_colo_checked"/>
+            android:background="@drawable/btn_special_bg"/>
 
     </LinearLayout>
 

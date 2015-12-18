@@ -18,7 +18,8 @@
             android:id="@+id/dynamic_cb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/CustomCheckboxTheme" />
+            style="@style/CustomCheckboxTheme"
+            android:background="@android:color/transparent"/>
 
         <RadioGroup
             android:id="@+id/dynamic_rg"
@@ -71,7 +72,7 @@
         <com.templar.sellerplatform.widget.PageIndicator
             android:id="@+id/dynamic_content_indicatore"
             android:layout_width="match_parent"
-            android:layout_height="3dp"
+            android:layout_height="@dimen/indicator_height"
             app:fades="false" />
     </LinearLayout>
 
