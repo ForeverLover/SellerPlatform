@@ -31,4 +31,8 @@ public class TabUtils {
 //        public static Class[] TabToggleFragment = {};
     }
 
+    public interface Dynamic{
+        public static int[] tabsTextId = {R.string.dynamic_notice, R.string.dynamic_deal, R.string.dynamic_wait, R.string.dynamic_end};
+    }
+
 }

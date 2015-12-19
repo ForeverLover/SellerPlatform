@@ -1,3 +1,4 @@
+/*
 package com.templar.sellerplatform.ui.activity;
 
 import android.os.Bundle;
@@ -8,17 +9,20 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.templar.indicatorlibrary.PageIndicator;
 import com.templar.sellerplatform.R;
 import com.templar.sellerplatform.config.BaseActivity;
 import com.templar.sellerplatform.ui.adapter.DynamicPagerAdapter;
-import com.templar.sellerplatform.widget.PageIndicator;
+//import com.templar.sellerplatform.widget.PageIndicator;
 
+*/
 /**
  * 项目:SellerPlatform
  * 作者：Hi-Templar
  * 创建时间：2015/12/16 17:10
  * 描述：$TODO
- */
+ *//*
+
 public class DynamicActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener {
     @ViewInject(R.id.dynamic_viewpager)
     private ViewPager dynamic_viewpager;
@@ -27,17 +31,17 @@ public class DynamicActivity extends BaseActivity implements CompoundButton.OnCh
     @ViewInject(R.id.dynamic_cb)
     private CheckBox dynamic_cb;
 
-    @ViewInject(R.id.dynamic_notice_btn)
-    private RadioButton dynamic_notice_btn;
-    @ViewInject(R.id.dynamic_deal_btn)
-    private RadioButton dynamic_deal_btn;
-    @ViewInject(R.id.dynamic_wait_btn)
-    private RadioButton dynamic_wait_btn;
-    @ViewInject(R.id.dynamic_end_btn)
-    private RadioButton dynamic_end_btn;
-
-    @ViewInject(R.id.dynamic_rg)
-    private RadioGroup dynamic_rg;
+//    @ViewInject(R.id.dynamic_notice_btn)
+//    private RadioButton dynamic_notice_btn;
+//    @ViewInject(R.id.dynamic_deal_btn)
+//    private RadioButton dynamic_deal_btn;
+//    @ViewInject(R.id.dynamic_wait_btn)
+//    private RadioButton dynamic_wait_btn;
+//    @ViewInject(R.id.dynamic_end_btn)
+//    private RadioButton dynamic_end_btn;
+//
+//    @ViewInject(R.id.dynamic_rg)
+//    private RadioGroup dynamic_rg;
 
     private DynamicPagerAdapter dynamicPagerAdapter;
 
@@ -158,3 +162,4 @@ public class DynamicActivity extends BaseActivity implements CompoundButton.OnCh
 
     }
 }
+*/

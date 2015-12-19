@@ -20,6 +20,8 @@
     <string name="dynamic_deal">處理</string>
     <string name="dynamic_wait">待取</string>
     <string name="dynamic_end">結束</string>
+    <string name="load_more">加載更多</string>
+    <string name="no_more_data">暂无更多数据</string>
 
     <!--登录-->
     <string name="login_submit">登錄</string>
@@ -58,4 +60,19 @@
     <string name="alter_pwd_null">請填入新密碼</string>
     <string name="alter_confpwd_null">請再次填入密碼</string>
     <string name="alter_confpwd_eror">兩次填入密碼不一致，請核實</string>
+
+    <!--訂單列表-->
+    <string name="order_addr">地址：</string>
+    <string name="order_remark">備註:</string>
+    <string name="order_second">秒鐘前</string>
+    <string name="order_minute">分鐘前</string>
+    <string name="order_hour">小時前</string>
+    <string name="order_day">天前</string>
+    <string name="order_month">月前</string>
+    <string name="order_year">年前:</string>
+    <string name="order_total">總計:</string>
+    <string name="order_type_out">外帶</string>
+    <string name="unit_yuan_text">元</string>
+
+
 </resources>

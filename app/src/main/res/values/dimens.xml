@@ -4,6 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="indicator_height">3dp</dimen>
+    <dimen name="category_tab_text">15.0sp</dimen>
 
 
     <dimen name="dp_zero">0dp</dimen>
@@ -26,6 +27,11 @@
     <dimen name="sp_seventeen">17sp</dimen>
     <dimen name="sp_eighteen">18sp</dimen>
     <dimen name="sp_twenty">20sp</dimen>
+
+    <!-- 间距-->
+    <dimen name="margin_s">6dp</dimen>
+    <dimen name="margin_m">12dp</dimen>
+    <dimen name="margin_l">16dp</dimen>
 
 
 </resources>

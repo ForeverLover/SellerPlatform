@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
     <color name="half_white">#80ffffff</color>
 
     <color name="tab_colo_checked">#20bafb</color>
@@ -15,4 +16,13 @@
     <color name="light_gray">#999999</color>
 
     <color name="split_line_color">#696969</color>
+
+    <color name="category_tab_text">#ff707070</color>
+    <color name="category_tab_text_dark">#fffafafa</color>
+    <color name="category_tab_highlight_text">#fffafafa</color>
+    <color name="category_tab_highlight_text_dark">#ffd43d3d</color>
+    <color name="category_tab_highlight_bg">#ffd43d3d</color>
+    <color name="category_tab_highlight_dark_bg">#fffafafa</color>
+    <color name="txt_orange">#e68e5e</color>
+
 </resources>

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/java/com/templar/indicatorlibrary/CirclePageIndicator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/java/com/templar/indicatorlibrary/IconPageIndicator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/java/com/templar/indicatorlibrary/IconPagerAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/java/com/templar/indicatorlibrary/IcsLinearLayout.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/java/com/templar/indicatorlibrary/LinePageIndicator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/java/com/templar/indicatorlibrary/PageIndicator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/java/com/templar/indicatorlibrary/TabPageIndicator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/java/com/templar/indicatorlibrary/TitlePageIndicator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/java/com/templar/indicatorlibrary/UnderlinePageIndicator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/res/color" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/res/drawable" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/res/drawable-hdpi" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/res/drawable-mdpi" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/res/drawable-xhdpi" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/res/drawable/viewpager_title_textcolor.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/res/values/vpi__attrs.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/res/values/vpi__colors.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/res/values/vpi__defaults.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/indicatorlibrary/src/main/res/values/vpi__styles.xml" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

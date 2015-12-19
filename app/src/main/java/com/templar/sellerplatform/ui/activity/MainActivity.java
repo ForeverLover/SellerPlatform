@@ -1,3 +1,4 @@
+/*
 package com.templar.sellerplatform.ui.activity;
 
 import android.app.Activity;
@@ -105,3 +106,4 @@ public class MainActivity extends BaseActivity implements TabHost.OnTabChangeLis
 
     }
 }
+*/
