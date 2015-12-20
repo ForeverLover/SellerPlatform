@@ -40,6 +40,8 @@ public class MoreRecyclerView extends RecyclerView {
      */
     private boolean isLoading = false;
 
+    private boolean isBottom=false;
+
 
     public MoreRecyclerView(Context context) {
         super(context);
@@ -77,22 +79,60 @@ public class MoreRecyclerView extends RecyclerView {
     }
 
     private class MScrollListener extends OnScrollListener {
+//        @Override
+//        public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+//            super.onScrolled(recyclerView, dx, dy);
+////            if (!(getLayoutManager() instanceof LinearLayoutManager)) {
+////                return;
+////            }
+////            LinearLayoutManager ll = (LinearLayoutManager) getLayoutManager();
+////            if (ll.findLastVisibleItemPosition() == mMoreRecyclerAdapter.getRealItemCount() - 1) {
+////                MLog.i(TAG, "scrolled last item:"+ll.findLastVisibleItemPosition());
+////                startLoadMore();
+////
+////            }
+//            if (canLoad()) {
+//                startLoadMore();
+//            }
+        boolean isSlidingtoLast=false;
+        @Override
+        public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+            LinearLayoutManager manager = (LinearLayoutManager)recyclerView.getLayoutManager();
+            // 当不滚动时
+            if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                //获取最后一个完全显示的ItemPosition
+                int lastVisibleItem = manager.findLastCompletelyVisibleItemPosition();
+                int totalItemCount = manager.getItemCount();
+
+                // 判断是否滚动到底部，并且是向右滚动
+                if(lastVisibleItem == (totalItemCount -1)&&isSlidingtoLast) {
+                    //加载更多功能的代码
+//                    Ln.e(&quot;howes right=&quot;+manager.findLastCompletelyVisibleItemPosition());
+//                    Toast.makeText(getActivityContext(),&quot;加载更多&quot;,0).show();
+                    setBottom(true);
+
+                }else
+                    setBottom(false);
+                if (canLoad())
+                    startLoadMore();
+            }
+        }
+
         @Override
         public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
             super.onScrolled(recyclerView, dx, dy);
-//            if (!(getLayoutManager() instanceof LinearLayoutManager)) {
-//                return;
-//            }
-//            LinearLayoutManager ll = (LinearLayoutManager) getLayoutManager();
-//            if (ll.findLastVisibleItemPosition() == mMoreRecyclerAdapter.getRealItemCount() - 1) {
-//                MLog.i(TAG, "scrolled last item:"+ll.findLastVisibleItemPosition());
-//                startLoadMore();
-//
-//            }
-            if (canLoad()) {
-                startLoadMore();
+            //dx用来判断横向滑动方向，dy用来判断纵向滑动方向
+            if(dy>0){
+                //大于0表示，正在向右滚动
+                isSlidingtoLast = true;
+            }else{
+                //小于等于0 表示停止或向左滚动
+                isSlidingtoLast = false;
             }
+
         }
+
+
     }
 
 
@@ -186,18 +226,25 @@ public class MoreRecyclerView extends RecyclerView {
      * 判断是否到了最底部
      */
     private boolean isBottom() {
-        if (!(getLayoutManager() instanceof LinearLayoutManager)) {
-            return false;
-        }
-        LinearLayoutManager ll = (LinearLayoutManager) getLayoutManager();
-       /* if (ll.findLastVisibleItemPosition() == mMoreRecyclerAdapter.getRealItemCount() - 1) {
-            MLog.i(TAG, "scrolled last item:" + ll.findLastVisibleItemPosition());
-            return true;
-
-        }*/
-        if(ll.findViewByPosition(ll.findFirstVisibleItemPosition()).getTop()==0 && ll.findFirstVisibleItemPosition()==0) return true;
-        return false;
+//        if (!(getLayoutManager() instanceof LinearLayoutManager)) {
+//            return false;
+//        }
+//        LinearLayoutManager ll = (LinearLayoutManager) getLayoutManager();
+//        if (mMoreRecyclerAdapter!=null &&ll.findLastVisibleItemPosition() == mMoreRecyclerAdapter.getRealItemCount()) {
+//            MLog.i(TAG, "scrolled last item:" + ll.findLastVisibleItemPosition());
+//            return true;
+//
+//        }
+////        MLog.v(TAG,"ll.findViewByPosition(ll.findFirstVisibleItemPosition()).getTop()="+ll.findViewByPosition(ll.findLastVisibleItemPosition()).getBottom()+" ll.findFirstVisibleItemPosition()="+ll.findFirstVisibleItemPosition());
+////        if(ll.findViewByPosition(ll.findFirstVisibleItemPosition()).getTop()==0 && ll.findFirstVisibleItemPosition()==0) return true;
+//        return false;
+        return this.isBottom;
     }
+
+    private void setBottom(boolean isBottom){
+        this.isBottom=isBottom;
+    }
+
 
     /**
      * 是否是上拉操作

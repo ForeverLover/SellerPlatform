@@ -1,6 +1,8 @@
 package com.templar.sellerplatform.ui.fragment;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
@@ -80,13 +82,19 @@ public class NoticeFragment extends BaseFragment implements SwipeRefreshLayout.O
     }
 
     @Override
-    public void initView() {
+        public void initView() {
         super.initView();
+
         notice_refreshLayout.setColorSchemeColors(new int[]{R.color.txt_orange});
         notice_view.setLayoutManager(new LinearLayoutManager(getActivity(),
                 LinearLayoutManager.VERTICAL, false));
         notice_view.addItemDecoration(new DividerItemDecoration(getActivity(),
                 LinearLayoutManager.VERTICAL, R.drawable.shape_divideline_order));
+//        notice_view.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
+//        notice_view.setLaodingMoreProgressStyle(ProgressStyle.BallRotate);
+//        notice_view.setArrowImageView(R.drawable.iconfont_downgrey);
+//        notice_view.setLoadingMoreEnabled(true);
+//        notice_view.setPullRefreshEnabled(true);
         notice_view.setAdapter(orderAdapter);
     }
 
@@ -100,7 +108,6 @@ public class NoticeFragment extends BaseFragment implements SwipeRefreshLayout.O
 
     @Override
     public void onRefresh() {
-        MLog.v("Tag", "onRefresh");
         isAdd = false;
         pageindex = 1;
        setData();
@@ -114,6 +121,13 @@ public class NoticeFragment extends BaseFragment implements SwipeRefreshLayout.O
 //        isAdd = true;
 //        pageindex++;
 //        setData();
-        notice_view.stopLoadMore();
+        Handler handler=new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+                notice_view.stopLoadMore();
+            }
+        };
+       handler.sendEmptyMessageDelayed(1,2*1000);
     }
 }

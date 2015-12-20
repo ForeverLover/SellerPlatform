@@ -4,8 +4,8 @@
     android:id="@+id/deal_swiprefresh_layout"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
+    <com.templar.sellerplatform.widget.morerecyclerview.MoreRecyclerView
         android:id="@+id/deal_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"></com.templar.sellerplatform.widget.morerecyclerview.MoreRecyclerView>
 </com.templar.sellerplatform.widget.CustomSwipRefreshLayout>

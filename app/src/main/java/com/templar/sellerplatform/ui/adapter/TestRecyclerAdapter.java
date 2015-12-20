@@ -56,7 +56,7 @@ public class TestRecyclerAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return stringList.size() + 1;
+        return stringList.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/category_tab_highlight_bg" />
-    <corners android:radius="4.0dip" />
-</shape>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <shape >
+      <solid android:color="@color/tab_colo_checked" />
+    </shape>
+  </item>
+  <item android:bottom="@dimen/indicator_height">
+    <shape>
+      <solid android:color="@color/white" />
+    </shape>
+  </item>
+</layer-list>

@@ -30,7 +30,6 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 	private float currentPositionOffset = 0f;
 
 	private Rect indicatorRect;
-	private Rect textRect;
 
 	private LinearLayout.LayoutParams defaultTabLayoutParams;
 
@@ -38,7 +37,6 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 	private int lastScrollX = 0;
 
 	private Drawable indicator;
-	private Drawable textDr;
 	private TextDrawable[] drawables;
 	private Drawable left_edge;
 	private Drawable right_edge;
@@ -63,7 +61,6 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 		}
 
 		indicatorRect = new Rect();
-		textRect=new Rect();
 
 		setFillViewport(true);
 		setWillNotDraw(false);
@@ -76,10 +73,10 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 		DisplayMetrics dm = getResources().getDisplayMetrics();
 		scrollOffset = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, scrollOffset, dm);
 
-		defaultTabLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+		defaultTabLayoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 
 		// 绘制高亮区域作为滑动分页指示器
-		indicator = getResources().getDrawable(R.color.tab_colo_checked);
+		indicator = getResources().getDrawable(R.drawable.bg_category_indicator);
 		// 左右边界阴影效果
 		left_edge = getResources().getDrawable(R.drawable.ic_category_left_edge);
 		right_edge = getResources().getDrawable(R.mipmap.ic_category_right_edge);
@@ -93,7 +90,7 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 			throw new IllegalStateException("ViewPager does not have adapter instance.");
 		}
 
-		pager.addOnPageChangeListener(pageListener);
+		pager.setOnPageChangeListener(pageListener);
 
 		notifyDataSetChanged();
 	}
@@ -129,7 +126,7 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 	}
 
 	// 计算滑动过程中矩形高亮区域的上下左右位置
-	private void calculateIndicatorRect(Rect rect,Rect textRect) {
+	private void calculateIndicatorRect(Rect rect) {
 		ViewGroup currentTab = (ViewGroup)tabsContainer.getChildAt(currentPosition);
 		TextView category_text = (TextView) currentTab.findViewById(R.id.category_text);
 
@@ -145,12 +142,8 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 			width = width * (1.0f - currentPositionOffset) + currentPositionOffset * (((float) next_category_text.getWidth()) + next_left);
 		}
 
-		textRect.set(((int) left) + getPaddingLeft(), getPaddingTop() + currentTab.getTop(),
+		rect.set(((int) left) + getPaddingLeft(), getPaddingTop() + currentTab.getTop() + category_text.getTop(),
 				((int) width) + getPaddingLeft(), currentTab.getTop() + getPaddingTop() + category_text.getTop() + category_text.getHeight());
-		rect.set(((int) left) + getPaddingLeft(), getPaddingTop() + currentTab.getTop()/* + category_text.getTop() + category_text.getHeight() - 3*/,
-				((int) width) + getPaddingLeft(), currentTab.getTop() + getPaddingTop() + category_text.getTop() + category_text.getHeight());
-
-
 
 	}
 
@@ -165,7 +158,7 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 			return;
 		}
 
-		calculateIndicatorRect(indicatorRect,textRect);
+		calculateIndicatorRect(indicatorRect);
 
 		int newScrollX = lastScrollX;
 		if (indicatorRect.left < getScrollX() + scrollOffset) {
@@ -184,13 +177,12 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 	public void draw(Canvas canvas) {
 		super.draw(canvas);
 
-		calculateIndicatorRect(indicatorRect,textRect);
+		calculateIndicatorRect(indicatorRect);
 
 		if(indicator != null) {
 			indicator.setBounds(indicatorRect);
 			indicator.draw(canvas);
 		}
-
 
 		int i = 0;
 		while (i < tabsContainer.getChildCount()) {
@@ -202,11 +194,11 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 				if (category_text != null) {
 					TextDrawable textDrawable = drawables[i - currentPosition + 1];
 					int save = canvas.save();
-					calculateIndicatorRect(indicatorRect,textRect);
-					canvas.clipRect(textRect);
+					calculateIndicatorRect(indicatorRect);
+					canvas.clipRect(indicatorRect);
 					textDrawable.setText(category_text.getText());
 					textDrawable.setTextSize(0, category_text.getTextSize());
-					textDrawable.setTextColor(getResources().getColor(R.color./*tab_colo_checked*/category_tab_highlight_text));
+					textDrawable.setTextColor(getResources().getColor(R.color.tab_colo_checked));
 					int left = tab.getLeft() + category_text.getLeft() + (category_text.getWidth() - textDrawable.getIntrinsicWidth()) / 2 + getPaddingLeft();
 					int top = tab.getTop() + category_text.getTop() + (category_text.getHeight() - textDrawable.getIntrinsicHeight()) / 2 + getPaddingTop();
 					textDrawable.setBounds(left, top, textDrawable.getIntrinsicWidth() + left, textDrawable.getIntrinsicHeight() + top);
@@ -274,5 +266,6 @@ public class CustomHorizotalScrollView extends HorizontalScrollView {
 		}
 
 	}
+
 
 }

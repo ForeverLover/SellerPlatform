@@ -3,6 +3,11 @@
     <item android:state_checked="true">
         <layer-list>
             <item android:bottom="@dimen/indicator_height">
+                <shape >
+                    <solid android:color="@color/half_white" />
+                </shape>
+            </item>
+            <item android:bottom="@dimen/indicator_height">
                 <shape android:shape="rectangle">
                     <padding android:bottom="5dp" android:left="0dp" android:right="0dp" android:top="5dp" />
                     <solid android:color="@color/tab_colo_checked" />
@@ -12,7 +17,11 @@
     </item>
     <item android:state_selected="true">
         <layer-list>
-
+            <item android:bottom="@dimen/indicator_height">
+                <shape >
+                    <solid android:color="@color/half_white" />
+                </shape>
+            </item>
             <item android:bottom="@dimen/indicator_height">
                 <shape android:shape="rectangle">
                     <padding android:bottom="5dp" android:left="0dp" android:right="0dp" android:top="5dp" />

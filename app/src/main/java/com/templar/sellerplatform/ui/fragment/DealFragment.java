@@ -2,7 +2,6 @@ package com.templar.sellerplatform.ui.fragment;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -16,6 +15,7 @@ import com.templar.sellerplatform.entity.Order;
 import com.templar.sellerplatform.parser.OrderParser;
 import com.templar.sellerplatform.ui.adapter.TestRecyclerAdapter;
 import com.templar.sellerplatform.widget.CustomSwipRefreshLayout;
+import com.templar.sellerplatform.widget.morerecyclerview.MoreRecyclerView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,7 +32,7 @@ public class DealFragment extends BaseFragment {
     private CustomSwipRefreshLayout deal_swiprefresh_layout;
 
     @ViewInject(R.id.deal_list)
-    private RecyclerView deal_list;
+    private MoreRecyclerView deal_list;
 
     private List<Order> orderList;
     private TestRecyclerAdapter recyclerAdapter;
