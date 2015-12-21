@@ -15,6 +15,7 @@ import com.templar.sellerplatform.R;
 import com.templar.sellerplatform.config.BaseActivity;
 import com.templar.sellerplatform.listener.MyTabActivityResultListener;
 import com.templar.sellerplatform.utils.TabUtils;
+import com.templar.sellerplatform.widget.MyFragmentTabHost;
 
 /**
  * 项目:SellerPlatform
@@ -23,13 +24,13 @@ import com.templar.sellerplatform.utils.TabUtils;
  * 描述：${TODO}
  */
 public class HomeActivity extends BaseActivity implements TabHost.OnTabChangeListener{
-    private FragmentTabHost tabHost;
+    private MyFragmentTabHost tabHost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        tabHost = (FragmentTabHost) super.findViewById(android.R.id.tabhost);
+        tabHost = (MyFragmentTabHost)findViewById(R.id.my_tabhost);
         tabHost.setup(this, super.getSupportFragmentManager()
                 , R.id.contentLayout);
         tabHost.getTabWidget().setDividerDrawable(null);

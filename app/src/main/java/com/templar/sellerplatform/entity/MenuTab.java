@@ -1,6 +1,7 @@
 package com.templar.sellerplatform.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 项目:SellerPlatform
@@ -8,21 +9,12 @@ import java.io.Serializable;
  * 创建时间：2015/12/18 18:09
  * 描述：${todo}
  */
-public class MenuTab implements Serializable{
+public class MenuTab implements Serializable {
     private String id;
     private String name;
     private int order;
-    private String weburl;
-    private String hweburl;
 
-    public MenuTab(String id, String name, int order, String weburl, String hweburl) {
-        super();
-        this.id = id;
-        this.name = name;
-        this.order = order;
-        this.weburl = weburl;
-        this.hweburl = hweburl;
-    }
+    private List<SubMenu> subMenuList;
 
     public String getId() {
         return id;
@@ -48,19 +40,11 @@ public class MenuTab implements Serializable{
         this.order = order;
     }
 
-    public String getWeburl() {
-        return weburl;
+    public List<SubMenu> getSubMenuList() {
+        return subMenuList;
     }
 
-    public void setWeburl(String weburl) {
-        this.weburl = weburl;
-    }
-
-    public String getHweburl() {
-        return hweburl;
-    }
-
-    public void setHweburl(String hweburl) {
-        this.hweburl = hweburl;
+    public void setSubMenuList(List<SubMenu> subMenuList) {
+        this.subMenuList = subMenuList;
     }
 }

@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.templar.sellerplatform.utils.MLog;
+
 import java.util.List;
 
 /**
@@ -25,7 +27,8 @@ public class ToggleMenuFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int idx) {
-        return fragmentList.get(idx % fragmentList.size());
+        MLog.v("Tag","index:"+idx);
+        return fragmentList.get(idx);
     }
 
     @Override

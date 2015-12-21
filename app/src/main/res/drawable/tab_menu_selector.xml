@@ -2,37 +2,35 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_checked="true">
         <layer-list>
-            <item android:bottom="@dimen/indicator_height">
+            <item>
                 <shape >
-                    <solid android:color="@color/half_white" />
+                    <solid android:color="@color/tab_colo_checked" />
                 </shape>
             </item>
             <item android:bottom="@dimen/indicator_height">
-                <shape android:shape="rectangle">
-                    <padding android:bottom="5dp" android:left="0dp" android:right="0dp" android:top="5dp" />
-                    <solid android:color="@color/tab_colo_checked" />
+                <shape>
+                    <solid android:color="@color/white" />
                 </shape>
             </item>
         </layer-list>
     </item>
     <item android:state_selected="true">
         <layer-list>
-            <item android:bottom="@dimen/indicator_height">
+            <item>
                 <shape >
-                    <solid android:color="@color/half_white" />
+                    <solid android:color="@color/tab_colo_checked" />
                 </shape>
             </item>
             <item android:bottom="@dimen/indicator_height">
-                <shape android:shape="rectangle">
-                    <padding android:bottom="5dp" android:left="0dp" android:right="0dp" android:top="5dp" />
-                    <solid android:color="@color/tab_colo_checked" />
+                <shape>
+                    <solid android:color="@color/white" />
                 </shape>
             </item>
         </layer-list>
     </item>
     <item>
         <shape>
-            <solid android:color="@color/half_white" />
+            <solid android:color="@color/white" />
         </shape>
     </item>
 </selector>

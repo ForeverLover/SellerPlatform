@@ -1,1 +1,1 @@
-include ':indicatorlibrary', ':app', ':xrecyclerview'
+include ':indicatorlibrary', ':xrecyclerview', ':app'

@@ -18,41 +18,18 @@ public class Order implements Serializable {
     private String orderAddr;
     private String orderRemark;
     private String orderPrice="0";
-
-    public String getOrderPrice() {
-        return orderPrice;
-    }
-
-    public void setOrderPrice(String orderPrice) {
-        this.orderPrice = orderPrice;
-    }
-
     private List<OrderProduct> productList;
+    /**
+     * 0-未接收
+     * 1-未处理
+     * 2-处理中
+     * 3-待取中
+     * 4-待取超時
+     * 5-已完成
+     */
     private int state;
+    private String remainingTime;
 
-    public String getOrderAddr() {
-        return orderAddr;
-    }
-
-    public void setOrderAddr(String orderAddr) {
-        this.orderAddr = orderAddr;
-    }
-
-    public String getOrderRemark() {
-        return orderRemark;
-    }
-
-    public void setOrderRemark(String orderRemark) {
-        this.orderRemark = orderRemark;
-    }
-
-    public int getState() {
-        return state;
-    }
-
-    public void setState(int state) {
-        this.state = state;
-    }
 
     public String getOrderId() {
         return orderId;
@@ -94,6 +71,30 @@ public class Order implements Serializable {
         this.orderType = orderType;
     }
 
+    public String getOrderAddr() {
+        return orderAddr;
+    }
+
+    public void setOrderAddr(String orderAddr) {
+        this.orderAddr = orderAddr;
+    }
+
+    public String getOrderRemark() {
+        return orderRemark;
+    }
+
+    public void setOrderRemark(String orderRemark) {
+        this.orderRemark = orderRemark;
+    }
+
+    public String getOrderPrice() {
+        return orderPrice;
+    }
+
+    public void setOrderPrice(String orderPrice) {
+        this.orderPrice = orderPrice;
+    }
+
     public List<OrderProduct> getProductList() {
         return productList;
     }
@@ -102,5 +103,19 @@ public class Order implements Serializable {
         this.productList = productList;
     }
 
+    public int getState() {
+        return state;
+    }
 
+    public void setState(int state) {
+        this.state = state;
+    }
+
+    public String getRemainingTime() {
+        return remainingTime;
+    }
+
+    public void setRemainingTime(String remainingTime) {
+        this.remainingTime = remainingTime;
+    }
 }

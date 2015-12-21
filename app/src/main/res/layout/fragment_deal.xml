@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <com.templar.sellerplatform.widget.morerecyclerview.MoreRecyclerView
-        android:id="@+id/deal_list"
+        android:id="@+id/deal_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></com.templar.sellerplatform.widget.morerecyclerview.MoreRecyclerView>
 </com.templar.sellerplatform.widget.CustomSwipRefreshLayout>

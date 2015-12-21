@@ -26,10 +26,12 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
+
             android:gravity="center">
 
             <RadioButton
-                android:textColor="@drawable/tab_text_selector"
+                android:checked="true"
+                android:textColor="@color/rb_text_selector"
                 android:id="@+id/dynamic_notice_btn"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -39,7 +41,7 @@
                 android:button="@null" />]
 
             <RadioButton
-                android:textColor="@drawable/tab_text_selector"
+                android:textColor="@color/rb_text_selector"
                 android:id="@+id/dynamic_deal_btn"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -49,7 +51,7 @@
                 android:button="@null" />
 
             <RadioButton
-                android:textColor="@drawable/tab_text_selector"
+                android:textColor="@color/rb_text_selector"
                 android:id="@+id/dynamic_wait_btn"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -59,7 +61,7 @@
                 android:button="@null" />
 
             <RadioButton
-                android:textColor="@drawable/tab_text_selector"
+                android:textColor="@color/rb_text_selector"
                 android:id="@+id/dynamic_end_btn"
                 android:layout_width="0dp"
                 android:layout_weight="1"

@@ -1,6 +1,7 @@
 package com.templar.sellerplatform.parser;
 
 import com.templar.sellerplatform.entity.MenuTab;
+import com.templar.sellerplatform.entity.SubMenu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,43 +21,106 @@ public class MenuParser {
         return instance;
     }
 
+
     public List<MenuTab> parseMenuTabList(/*String data*/) {
        /* if (StringUtils.isEmpty(data)) return null;*/
         List<MenuTab> menuTabList = null;
 
-        menuTabList=new ArrayList<MenuTab>();
-        menuTabList.add(new MenuTab("T1348647909107","头条",0,
-                "http://c.3g.163.com/nc/article/headline/T1348647909107/0-20.html",""));
-        menuTabList.add(new MenuTab("T1348648517839","娱乐",0,
-                "http://c.3g.163.com/nc/article/list/T1348648517839/0-20.html",""));
-        menuTabList.add(new MenuTab("T1348649079062","体育",0,
-                "http://c.3g.163.com/nc/article/list/T1348649079062/0-20.html",""));
-        menuTabList.add(new MenuTab("T1348648756099","财经",0,"http://c.3g.163.com/nc/article/list/T1348648756099/0-20.html",""));
+        menuTabList = new ArrayList<>();
+        MenuTab menuTab = new MenuTab();
+        menuTab.setName("吐司");
+        menuTabList.add(menuTab);
 
-        menuTabList.add(new MenuTab("","热点",0,
-                "http://c.3g.163.com/recommend/getSubDocPic?passport=&devId=000000000000000&size=20",""));
-        menuTabList.add(new MenuTab("","科技",0,"",""));
-        menuTabList.add(new MenuTab("","图片",0,"",""));
-        menuTabList.add(new MenuTab("","汽车",0,"",""));
-        menuTabList.add(new MenuTab("","时尚",0,"",""));
-        menuTabList.add(new MenuTab("","成都",0,"",""));
-        menuTabList.add(new MenuTab("","科技",0,"",""));
-        menuTabList.add(new MenuTab("","跟帖",0,"",""));
-        menuTabList.add(new MenuTab("","直播",0,"",""));
-        menuTabList.add(new MenuTab("","轻松一刻",0,"",""));
-        menuTabList.add(new MenuTab("","汽车",0,"",""));
-        menuTabList.add(new MenuTab("","段子",0,"",""));
-        menuTabList.add(new MenuTab("","军事",0,"",""));
-        menuTabList.add(new MenuTab("","房产",0,"",""));
-        menuTabList.add(new MenuTab("","历史",0,"",""));
-        menuTabList.add(new MenuTab("","家居",0,"",""));
-        menuTabList.add(new MenuTab("","原创",0,"",""));
-        menuTabList.add(new MenuTab("","游戏",0,"",""));
-        menuTabList.add(new MenuTab("","健康",0,"",""));
-        menuTabList.add(new MenuTab("","政务",0,"",""));
-        menuTabList.add(new MenuTab("","漫画",0,"",""));
-        menuTabList.add(new MenuTab("","哒哒",0,"",""));
-        menuTabList.add(new MenuTab("","彩票",0,"",""));
+        menuTab = new MenuTab();
+        menuTab.setName("飲料");
+        List<SubMenu> subMenuList = new ArrayList<>();
+        SubMenu subMenu = new SubMenu();
+        subMenu.setName("豆漿");
+        subMenu.setOn(true);
+        subMenuList.add(subMenu);
+        subMenu = new SubMenu();
+        subMenu.setName("紅茶");
+        subMenu.setOn(true);
+        subMenuList.add(subMenu);
+        subMenu = new SubMenu();
+        subMenu.setName("烏龍茶");
+        subMenuList.add(subMenu);
+        subMenu = new SubMenu();
+        subMenu.setName("多多綠茶");
+        subMenuList.add(subMenu);
+        subMenu = new SubMenu();
+        subMenu.setName("錫蘭紅茶");
+        subMenuList.add(subMenu);
+        subMenu = new SubMenu();
+        subMenu.setName("豆漿紅茶");
+        subMenuList.add(subMenu);
+        subMenu = new SubMenu();
+        subMenu.setName("鴛鴦奶茶");
+        subMenu.setOn(true);
+        subMenuList.add(subMenu);
+        subMenu = new SubMenu();
+        subMenu.setName("珍珠紅茶");
+        subMenu.setOn(true);
+        subMenuList.add(subMenu);
+        subMenu = new SubMenu();
+        subMenu.setName("紅茶拿鐵");
+        subMenuList.add(subMenu);
+        menuTab.setSubMenuList(subMenuList);
+        menuTabList.add(menuTab);
+
+        menuTab = new MenuTab();
+        menuTab.setName("蛋餅");
+        menuTabList.add(menuTab);
+
+        menuTab = new MenuTab();
+        menuTab.setName("漢堡");
+        menuTabList.add(menuTab);
+
+        menuTab = new MenuTab();
+        menuTab.setName("焗烤燴飯");
+        menuTabList.add(menuTab);
+
+        return menuTabList;
+    }
+
+    public List<SubMenu> parseViceList(/*String data*/) {
+       /* if (StringUtils.isEmpty(data)) return null;*/
+        List<SubMenu> menuTabList = null;
+
+        menuTabList = new ArrayList<>();
+        SubMenu submenu = new SubMenu();
+        submenu.setName("冰塊");
+        submenu.setOn(true);
+        menuTabList.add(submenu);
+
+        submenu = new SubMenu();
+        submenu.setOn(true);
+        submenu.setName("甜度");
+
+        menuTabList.add(submenu);
+
+        submenu = new SubMenu();
+        submenu.setName("加料");
+        menuTabList.add(submenu);
+
+        submenu = new SubMenu();
+        submenu.setName("麵包");
+        menuTabList.add(submenu);
+
+        submenu = new SubMenu();
+        submenu.setName("套餐");
+        submenu.setOn(true);
+        menuTabList.add(submenu);
+
+        submenu = new SubMenu();
+        submenu.setName("小點");
+        submenu.setOn(true);
+        menuTabList.add(submenu);
+
+        submenu = new SubMenu();
+        submenu.setName("燙頭");
+        menuTabList.add(submenu);
+
         return menuTabList;
     }
 }

@@ -16,7 +16,9 @@ import com.templar.sellerplatform.config.BaseFragment;
 import com.templar.sellerplatform.entity.MenuTab;
 import com.templar.sellerplatform.parser.MenuParser;
 import com.templar.sellerplatform.ui.adapter.ToggleMenuFragmentAdapter;
+import com.templar.sellerplatform.utils.MLog;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,45 +46,50 @@ public class ToggleMenuFragment extends BaseFragment implements ViewPager.OnPage
 
     @Override
     protected void onCreateView(View contentView, Bundle savedInstanceState, LayoutInflater inflater) {
-        initTab(inflater);
-        initViewPager();
+        init(inflater);
     }
 
 
-    private void initViewPager() {
+    private void init(LayoutInflater inflater) {
         List<MenuTab> menuTabList = MenuParser.getInstance().parseMenuTabList();
         if (menuTabList != null && !menuTabList.isEmpty()) {
-            fragmentList = new ArrayList<Fragment>();
+            fragmentList = new ArrayList<>();
             for (int i = 0; i < menuTabList.size(); i++) {
                 ToggleMenuSubFragment fragment = new ToggleMenuSubFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString("cname", menuTabList.get(i).getName());
-                fragment.setArguments(bundle);
+                Bundle args = new Bundle();
+                args.putSerializable("title", menuTabList.get(i).getName());
+                args.putSerializable("subMenuList", (Serializable) menuTabList.get(i).getSubMenuList());
+                fragment.setArguments(args);
                 fragmentList.add(fragment);
+
+                RadioButton rb = (RadioButton) inflater.
+                        inflate(R.layout.tab_rb, null);
+                rb.setId(i);
+                rb.setText(menuTabList.get(i).getName());
+
+                RadioGroup.LayoutParams params = new
+                        RadioGroup.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT,
+                        RadioGroup.LayoutParams.WRAP_CONTENT);
+
+                toggle_radio_layout.addView(rb, params);
             }
+            toggle_radio_layout.check(0);
+            toggle_radio_layout.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    toggle_veiewpager.setCurrentItem(checkedId);
+                }
+            });
+
             menuFragmentAdapter = new ToggleMenuFragmentAdapter(super.getActivity().getSupportFragmentManager(), fragmentList);
             toggle_veiewpager.setAdapter(menuFragmentAdapter);
-            toggle_veiewpager.setOffscreenPageLimit(2);
+//            toggle_veiewpager.setOffscreenPageLimit(4);
             toggle_veiewpager.setCurrentItem(0);
             toggle_veiewpager.addOnPageChangeListener(this);
         }
     }
 
-    private void initTab(LayoutInflater inflater) {
-        List<MenuTab> channelList = MenuParser.getInstance().parseMenuTabList();
-        for (int i = 0; i < channelList.size(); i++) {
-            RadioButton rb = (RadioButton) inflater.
-                    inflate(R.layout.tab_rb, null);
-            rb.setId(i);
-            rb.setText(channelList.get(i).getName());
-            RadioGroup.LayoutParams params = new
-                    RadioGroup.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT,
-                    RadioGroup.LayoutParams.WRAP_CONTENT);
 
-            toggle_radio_layout.addView(rb, params);
-        }
-        toggle_radio_layout.check(0);
-    }
 
 
     @Override
@@ -110,5 +117,7 @@ public class ToggleMenuFragment extends BaseFragment implements ViewPager.OnPage
         int screenWidth = metrics.widthPixels;
         int len = left + width / 2 - screenWidth / 2;
         toggle_scroll_layout.smoothScrollTo(len, 0);
+//        MLog.v("Tag","radioGroup-width:"+toggle_radio_layout.getWidth()+" rabTab:"+rb.getWidth()+" measur:"+rb.getMeasuredWidth());
+
     }
 }

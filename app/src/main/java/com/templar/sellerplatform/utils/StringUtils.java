@@ -6,6 +6,8 @@ import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.AbsoluteSizeSpan;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -61,5 +63,14 @@ public class StringUtils {
         wordtoSpan.setSpan(new AbsoluteSizeSpan(DensityUtil.sp2px(context, firstSize), false), 0, splitIndex, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         wordtoSpan.setSpan(new AbsoluteSizeSpan(DensityUtil.sp2px(context, secondSize), false), splitIndex, source.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         return wordtoSpan;
+    }
+
+    public static String formateTimeStr(String data) {
+        if (!isNumeric(data)) return "";
+        long timeSrc = Long.parseLong("data") * 1000;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        date.setTime(timeSrc);
+        return sdf.format(date);
     }
 }

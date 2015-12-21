@@ -133,8 +133,8 @@ android:id="@+id/order_item_opLayout"
                     android:background="@drawable/solid_rounded_box_blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp_sixteen"
-                    android:text="接受"/>
+                    android:visibility="gone"
+                    android:textSize="@dimen/sp_sixteen"/>
                 <TextView
                     android:layout_marginLeft="@dimen/dp_ten"
                     android:paddingLeft="@dimen/dp_fifteen"
@@ -146,8 +146,8 @@ android:id="@+id/order_item_opLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/sp_sixteen"
-                    android:text="處理"/>
+                    android:visibility="gone"
+                    android:textSize="@dimen/sp_sixteen"/>
             </LinearLayout>
             <TextView
                 android:visibility="gone"

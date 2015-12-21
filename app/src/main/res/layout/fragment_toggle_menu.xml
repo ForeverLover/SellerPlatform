@@ -8,11 +8,13 @@
         android:id="@+id/toggle_scroll_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fillViewport="true"
         android:scrollbars="none">
 
         <RadioGroup
             android:id="@+id/toggle_radio_layout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
     </HorizontalScrollView>

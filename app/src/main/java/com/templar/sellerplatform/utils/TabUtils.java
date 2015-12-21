@@ -4,7 +4,7 @@ import com.templar.sellerplatform.R;
 import com.templar.sellerplatform.ui.fragment.DynamicFragment;
 import com.templar.sellerplatform.ui.fragment.ModifyFramgnent;
 import com.templar.sellerplatform.ui.fragment.SettingsFragment;
-import com.templar.sellerplatform.ui.fragment.TogglViceFragment;
+import com.templar.sellerplatform.ui.fragment.ToggleViceFragment;
 import com.templar.sellerplatform.ui.fragment.ToggleFragment;
 import com.templar.sellerplatform.ui.fragment.ToggleMenuFragment;
 
@@ -27,7 +27,7 @@ public class TabUtils {
 
     public interface ProTab {
         public static int[] tabsTextId = {R.string.tab_menu, R.string.tab_vice};
-        public static Class[] TabToggleFragment = {ToggleMenuFragment.class, TogglViceFragment.class};
+        public static Class[] TabToggleFragment = {ToggleMenuFragment.class, ToggleViceFragment.class};
 //        public static Class[] TabToggleFragment = {};
     }
 

@@ -21,12 +21,12 @@ public class OrderParser {
         return instance;
     }
 
-    public List<Order> parseOrderList(/*String data*/){
+    public List<Order> parseOrderList(/*String data*/int state) {
 //        if (StringUtils.isEmpty(data)) return null;
-        List<Order> orderList=null;
+        List<Order> orderList = null;
 
-        orderList=new ArrayList<Order>();
-        Order order=new Order();
+        orderList = new ArrayList<Order>();
+        Order order = new Order();
         order.setOrderId("1");
         order.setBuyerName("張先生");
         order.setOrderNo("S023");
@@ -34,8 +34,8 @@ public class OrderParser {
         order.setOrderTime("2011-12-34 19:18");
         order.setOrderType("外帶");
         order.setOrderRemark("玉山銀行旁");
-        List<OrderProduct> orderProductList=new ArrayList<OrderProduct>();
-        OrderProduct orderProduct=new OrderProduct();
+        List<OrderProduct> orderProductList = new ArrayList<OrderProduct>();
+        OrderProduct orderProduct = new OrderProduct();
         orderProduct.setAmount("2");
         orderProduct.setProductName("珍珠奶茶");
         orderProduct.setProductType("大杯");
@@ -48,9 +48,26 @@ public class OrderParser {
         orderProductList.add(orderProduct);
         order.setProductList(orderProductList);
         order.setOrderPrice("310");
+        int state1 = -1;
+        switch (state) {
+            case 0:
+                state1 = 0;
+                break;
+            case 1:
+                state1 = 2;
+                break;
+            case 2:
+                state1 = 3;
+                break;
+            case 3:
+                state1 = 5;
+                break;
+        }
+        order.setState(state1);
+        order.setRemainingTime("20");
         orderList.add(order);
 
-        order=new Order();
+        order = new Order();
         order.setOrderId("2");
         order.setBuyerName("李先生");
         order.setOrderNo("S043");
@@ -58,8 +75,8 @@ public class OrderParser {
         order.setOrderTime("2011-12-31 19:20");
         order.setOrderType("外帶");
         order.setOrderRemark("玉山銀行旁");
-        List<OrderProduct> orderProductList1=new ArrayList<OrderProduct>();
-        OrderProduct orderProduct1=new OrderProduct();
+        List<OrderProduct> orderProductList1 = new ArrayList<OrderProduct>();
+        OrderProduct orderProduct1 = new OrderProduct();
         orderProduct1.setAmount("2");
         orderProduct1.setProductName("黑糖刨冰");
         orderProduct1.setProductType("大碗");
@@ -72,10 +89,24 @@ public class OrderParser {
         orderProductList1.add(orderProduct1);
         order.setProductList(orderProductList1);
         order.setOrderPrice("280");
+        int state2 = -1;
+        switch (state) {
+            case 0:
+                state2 = 1;
+                break;
+            case 1:
+                state2 = 2;
+                break;
+            case 2:
+                state2 = 4;
+                break;
+            case 3:
+                state2 = 5;
+                break;
+        }
+        order.setState(state2);
+        order.setRemainingTime("15");
         orderList.add(order);
-
-
-
 
 
         return orderList;

@@ -1,6 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/dp_five"
+        android:layout_marginLeft="@dimen/dp_ten"
+        android:layout_marginRight="@dimen/dp_ten"
+        android:id="@+id/toggle_submenu_recyclerview"
+        android:layout_width="match_parent"
+        android:background="@drawable/half_whit_bg"
+        android:layout_height="wrap_content">
 
-</LinearLayout>
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <com.templar.sellerplatform.widget.CustomListView
+        android:id="@+id/toggle_submenu_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_ten"
+        android:layout_marginRight="@dimen/dp_ten"
+        android:layout_marginTop="@dimen/dp_five"
+        android:listSelector="@android:color/transparent"
+        android:divider="@drawable/shape_divideline_menu"
+        android:footerDividersEnabled="false"
+        android:background="@drawable/half_whit_bg">
+
+    </com.templar.sellerplatform.widget.CustomListView>
+</ScrollView>

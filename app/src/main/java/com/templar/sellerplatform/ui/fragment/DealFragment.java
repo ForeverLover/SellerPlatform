@@ -1,24 +1,25 @@
 package com.templar.sellerplatform.ui.fragment;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.Toast;
 
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.templar.sellerplatform.R;
 import com.templar.sellerplatform.config.BaseFragment;
 import com.templar.sellerplatform.entity.Order;
 import com.templar.sellerplatform.parser.OrderParser;
-import com.templar.sellerplatform.ui.adapter.TestRecyclerAdapter;
+import com.templar.sellerplatform.ui.adapter.OrderRecyclerAdapter;
+import com.templar.sellerplatform.utils.MLog;
 import com.templar.sellerplatform.widget.CustomSwipRefreshLayout;
+import com.templar.sellerplatform.widget.DividerItemDecoration;
 import com.templar.sellerplatform.widget.morerecyclerview.MoreRecyclerView;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,16 +28,29 @@ import java.util.List;
  * 创建时间：2015/12/16 19:23
  * 描述：处理中
  */
-public class DealFragment extends BaseFragment {
+public class DealFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, MoreRecyclerView.OnLoadMoreListener {
     @ViewInject(R.id.deal_swiprefresh_layout)
     private CustomSwipRefreshLayout deal_swiprefresh_layout;
 
-    @ViewInject(R.id.deal_list)
-    private MoreRecyclerView deal_list;
+    @ViewInject(R.id.deal_recyclerview)
+    private MoreRecyclerView deal_recyclerview;
+
+    private OrderRecyclerAdapter orderRecyclerAdapter;
 
     private List<Order> orderList;
-    private TestRecyclerAdapter recyclerAdapter;
 
+    private boolean showLoading;
+    private boolean isAdd;
+    private int uid;
+    private int pageindex;
+    private int pagesize;
+
+    @Override
+    public void initData() {
+        super.initData();
+        pageindex=1;
+        orderRecyclerAdapter = new OrderRecyclerAdapter(new ArrayList<Order>(),getActivity());
+    }
 
     @Override
     protected int getViewLayoutId() {
@@ -45,53 +59,72 @@ public class DealFragment extends BaseFragment {
 
     @Override
     protected void onCreateView(View contentView, Bundle savedInstanceState, LayoutInflater inflater) {
+    }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        MLog.v("Tag", "onStart");
+        setData();
+    }
+
+    private void setData(){
+        orderList = OrderParser.getInstance().parseOrderList(1);
+        if (orderList == null) {
+            orderList = new ArrayList<Order>();
+        }
+        if (pageindex == 1) {
+            orderRecyclerAdapter.setList(orderList);
+        } else {
+            orderRecyclerAdapter.addList(orderList);
+        }
+
+        MLog.v("Tag","size:"+ orderRecyclerAdapter.getList().size());
     }
 
     @Override
     public void initView() {
         super.initView();
-        // 模拟一些数据
-        final List<String> datas = new ArrayList<String>();
-        for (int i = 0; i < 20; i++) {
-            datas.add("item - " + i);
-        }
 
-        // 构造适配器
-        final BaseAdapter adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1,
-                datas);
-        orderList = OrderParser.getInstance().parseOrderList();
-        recyclerAdapter=new TestRecyclerAdapter(datas);
-
-
-        deal_list.setLayoutManager(new LinearLayoutManager(getActivity(),
+        deal_swiprefresh_layout.setColorSchemeColors(new int[]{R.color.txt_orange});
+        deal_recyclerview.setLayoutManager(new LinearLayoutManager(getActivity(),
                 LinearLayoutManager.VERTICAL, false));
+        deal_recyclerview.addItemDecoration(new DividerItemDecoration(getActivity(),
+                LinearLayoutManager.VERTICAL, R.drawable.shape_divideline_order));
 
-        deal_list.setAdapter(recyclerAdapter);
+        deal_recyclerview.setAdapter(orderRecyclerAdapter);
+    }
 
+    @Override
+    public void initListener() {
+        super.initListener();
+        deal_swiprefresh_layout.setOnRefreshListener(this);
+        deal_recyclerview.setOnLoadMoreListener(this);
 
-        // 加载监听器
-        deal_swiprefresh_layout.setOnLoadListener(new CustomSwipRefreshLayout.OnLoadListener() {
+    }
 
+    @Override
+    public void onRefresh() {
+        isAdd = false;
+        pageindex = 1;
+        setData();
+        deal_swiprefresh_layout.setRefreshing(false);
+    }
+
+    @Override
+    public void onLoadMore() {
+        MLog.v("Tag", "onLoadMore");
+//        showLoading = false;
+//        isAdd = true;
+//        pageindex++;
+//        setData();
+        Handler handler=new Handler(){
             @Override
-            public void onLoad() {
-
-                Toast.makeText(getActivity(), "load", Toast.LENGTH_SHORT).show();
-
-                deal_list.postDelayed(new Runnable() {
-
-                    @Override
-                    public void run() {
-                        datas.add(new Date().toGMTString());
-                        adapter.notifyDataSetChanged();
-                        // 加载完后调用该方法
-                        deal_swiprefresh_layout.setLoading(false);
-                    }
-                }, 1500);
-
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+                deal_recyclerview.stopLoadMore();
             }
-        });
-
+        };
+        handler.sendEmptyMessageDelayed(1,2*1000);
     }
 }

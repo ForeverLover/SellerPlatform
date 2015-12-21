@@ -67,9 +67,9 @@ public class DynamicFragment extends BaseFragment implements CompoundButton.OnCh
     @Override
     public void initView() {
         super.initView();
+
         dynamic_viewpager.setAdapter(dynamicPagerAdapter);
         dynamic_content_indicatore.setViewPager(dynamic_viewpager);
-        dynamic_notice_btn.setTextColor(getResources().getColor(R.color.tab_colo_checked));
 
     }
 
@@ -110,25 +110,17 @@ public class DynamicFragment extends BaseFragment implements CompoundButton.OnCh
         dynamic_rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                dynamic_notice_btn.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
-                dynamic_deal_btn.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
-                dynamic_wait_btn.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
-                dynamic_end_btn.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
                 switch (checkedId) {
                     case R.id.dynamic_notice_btn:
                         dynamic_viewpager.setCurrentItem(0);
-                        dynamic_notice_btn.setTextColor(getResources().getColor(R.color.tab_colo_checked));
                         break;
                     case R.id.dynamic_deal_btn:
-                        dynamic_deal_btn.setTextColor(getResources().getColor(R.color.tab_colo_checked));
                         dynamic_viewpager.setCurrentItem(1);
                         break;
                     case R.id.dynamic_wait_btn:
-                        dynamic_wait_btn.setTextColor(getResources().getColor(R.color.tab_colo_checked));
                         dynamic_viewpager.setCurrentItem(2);
                         break;
                     case R.id.dynamic_end_btn:
-                        dynamic_end_btn.setTextColor(getResources().getColor(R.color.tab_colo_checked));
                         dynamic_viewpager.setCurrentItem(3);
                         break;
                 }

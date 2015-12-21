@@ -20,6 +20,7 @@ public abstract class BaseFragment extends Fragment implements Init, XRequestCal
     private boolean isDestroyedView = false;// View是否已销毁
     private boolean newObject;// 新对象
     private ProgressDialog progressDialog;
+    private View mView=null;
 
     public BaseFragment() {
         super();
@@ -50,7 +51,17 @@ public abstract class BaseFragment extends Fragment implements Init, XRequestCal
     protected abstract int getViewLayoutId();
 
     protected View getContentView(LayoutInflater inflater, ViewGroup container) {
-        return inflater.inflate(getViewLayoutId(), container, false);
+
+        if(mView == null) {
+            mView = inflater.inflate(getViewLayoutId(), container, false);
+        }
+        //判断是否已经被加过parent， 如果有parent需要从parent删除，要不然会发生这个rootview已经有parent的错误。
+        ViewGroup parent = (ViewGroup)mView.getParent();
+        if(parent != null) {
+            parent.removeView(mView);
+        }
+
+        return mView;
     }
 
     /**

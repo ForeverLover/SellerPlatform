@@ -29,7 +29,7 @@ public class ToggleFragment extends BaseFragment{
     private RadioButton toggle_vice_rb;
 
     private ToggleMenuFragment toggleMenuFragment;
-    private TogglViceFragment togglViceFragment;
+    private ToggleViceFragment togglViceFragment;
 
 
     @Override
@@ -102,7 +102,7 @@ public class ToggleFragment extends BaseFragment{
                 if (togglViceFragment != null)
                     ft.show(togglViceFragment);
                 else {
-                    togglViceFragment = new TogglViceFragment();
+                    togglViceFragment = new ToggleViceFragment();
                     ft.add(R.id.toggle_contentLayout, togglViceFragment);
                 }
                 break;

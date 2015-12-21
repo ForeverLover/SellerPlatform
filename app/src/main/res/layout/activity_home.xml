@@ -12,8 +12,8 @@
 
     </FrameLayout>
 
-    <android.support.v4.app.FragmentTabHost
-        android:id="@android:id/tabhost"
+    <com.templar.sellerplatform.widget.MyFragmentTabHost
+        android:id="@+id/my_tabhost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#F6F6F6">
@@ -22,5 +22,5 @@
             android:id="@android:id/tabcontent"
             android:layout_width="0dp"
             android:layout_height="0dp" />
-    </android.support.v4.app.FragmentTabHost>
+    </com.templar.sellerplatform.widget.MyFragmentTabHost>
 </LinearLayout>

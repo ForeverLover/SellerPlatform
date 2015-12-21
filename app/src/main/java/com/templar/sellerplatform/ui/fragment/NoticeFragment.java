@@ -13,7 +13,7 @@ import com.templar.sellerplatform.R;
 import com.templar.sellerplatform.config.BaseFragment;
 import com.templar.sellerplatform.entity.Order;
 import com.templar.sellerplatform.parser.OrderParser;
-import com.templar.sellerplatform.ui.adapter.OrderAdapter;
+import com.templar.sellerplatform.ui.adapter.OrderRecyclerAdapter;
 import com.templar.sellerplatform.utils.MLog;
 import com.templar.sellerplatform.widget.CustomSwipRefreshLayout;
 import com.templar.sellerplatform.widget.DividerItemDecoration;
@@ -34,7 +34,7 @@ public class NoticeFragment extends BaseFragment implements SwipeRefreshLayout.O
     @ViewInject(R.id.notice_view)
     private MoreRecyclerView notice_view;
 
-    private OrderAdapter orderAdapter;
+    private OrderRecyclerAdapter orderRecyclerAdapter;
 
     private List<Order> orderList;
 
@@ -48,7 +48,7 @@ public class NoticeFragment extends BaseFragment implements SwipeRefreshLayout.O
     public void initData() {
         super.initData();
         pageindex=1;
-        orderAdapter = new OrderAdapter(new ArrayList<Order>(),getActivity());
+        orderRecyclerAdapter = new OrderRecyclerAdapter(new ArrayList<Order>(),getActivity());
     }
 
     @Override
@@ -68,17 +68,17 @@ public class NoticeFragment extends BaseFragment implements SwipeRefreshLayout.O
     }
 
     private void setData(){
-        orderList = OrderParser.getInstance().parseOrderList();
+        orderList = OrderParser.getInstance().parseOrderList(0);
         if (orderList == null) {
             orderList = new ArrayList<Order>();
         }
         if (pageindex == 1) {
-            orderAdapter.setList(orderList);
+            orderRecyclerAdapter.setList(orderList);
         } else {
-            orderAdapter.addList(orderList);
+            orderRecyclerAdapter.addList(orderList);
         }
 
-        MLog.v("Tag","size:"+orderAdapter.getList().size());
+        MLog.v("Tag","size:"+ orderRecyclerAdapter.getList().size());
     }
 
     @Override
@@ -90,12 +90,8 @@ public class NoticeFragment extends BaseFragment implements SwipeRefreshLayout.O
                 LinearLayoutManager.VERTICAL, false));
         notice_view.addItemDecoration(new DividerItemDecoration(getActivity(),
                 LinearLayoutManager.VERTICAL, R.drawable.shape_divideline_order));
-//        notice_view.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
-//        notice_view.setLaodingMoreProgressStyle(ProgressStyle.BallRotate);
-//        notice_view.setArrowImageView(R.drawable.iconfont_downgrey);
-//        notice_view.setLoadingMoreEnabled(true);
-//        notice_view.setPullRefreshEnabled(true);
-        notice_view.setAdapter(orderAdapter);
+
+        notice_view.setAdapter(orderRecyclerAdapter);
     }
 
     @Override
@@ -116,7 +112,7 @@ public class NoticeFragment extends BaseFragment implements SwipeRefreshLayout.O
 
     @Override
     public void onLoadMore() {
-//        MLog.v("Tag", "onLoadMore");
+        MLog.v("Tag", "onLoadMore");
 //        showLoading = false;
 //        isAdd = true;
 //        pageindex++;

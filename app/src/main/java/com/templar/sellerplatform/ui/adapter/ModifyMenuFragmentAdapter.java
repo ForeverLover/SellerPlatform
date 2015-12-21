@@ -18,13 +18,11 @@ public class ModifyMenuFragmentAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> fragmentList;
     private FragmentManager fm;
-    private List<MenuTab> menuTabList;
 
-    public ModifyMenuFragmentAdapter(FragmentManager fm, List<Fragment> fragmentList,List<MenuTab> menuTabList) {
+    public ModifyMenuFragmentAdapter(FragmentManager fm, List<Fragment> fragmentList) {
         super(fm);
         this.fragmentList = fragmentList;
         this.fm = fm;
-        this.menuTabList=menuTabList;
     }
 
     @Override
@@ -32,10 +30,6 @@ public class ModifyMenuFragmentAdapter extends FragmentPagerAdapter {
         return fragmentList.get(idx % fragmentList.size());
     }
 
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return menuTabList.get(position).getName();
-    }
 
     @Override
     public int getCount() {

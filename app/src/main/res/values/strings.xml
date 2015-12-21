@@ -74,5 +74,17 @@
     <string name="order_type_out">外帶</string>
     <string name="unit_yuan_text">元</string>
 
+    <string name="order_state_accept">接收</string>
+    <string name="order_state_deal">處理</string>
+    <string name="order_state_take">待取</string>
+    <string name="order_state_unfinish">未完成</string>
+    <string name="order_state_finished">已完成</string>
+    <string name="order_decline_prefix">剩餘</string>
+    <string name="order_decline_suffix_minute">分鐘</string>
+    <string name="order_decline_suffix_hour">小時</string>
+
+    <!--编辑菜单-->
+    <string name="menu_single_add">新增单品</string>
+    <string name="menu_vice_add">新增副选项</string>
 
 </resources>
