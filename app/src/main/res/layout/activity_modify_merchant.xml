@@ -18,11 +18,14 @@
             android:orientation="horizontal">
             <TextView
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_merchant_name"/>
             <EditText
+                android:textColorHint="@color/black_one"
+                android:textColor="@color/black"
                 android:id="@+id/modify_merchant_name"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -36,12 +39,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_merchant_name_vice"/>
             <EditText
+                android:textColorHint="@color/black_one"
+                android:textColor="@color/black"
                 android:id="@+id/modify_merchant_vicename"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -55,12 +61,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_id"/>
             <TextView
+                android:textColorHint="@color/black"
                 android:id="@+id/modify_merchant_id"
                 android:layout_weight="2"
                 android:textSize="@dimen/sp_sixteen"
@@ -73,12 +81,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_addr"/>
             <EditText
+                android:textColor="@color/black_one"
                 android:id="@+id/modify_merchant_addr"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -92,12 +102,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_link"/>
             <EditText
+                android:textColor="@color/black_one"
                 android:id="@+id/modify_merchant_link"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -111,12 +123,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_onTime"/>
             <EditText
+                android:textColor="@color/black_one"
                 android:id="@+id/modify_merchant_showTime"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -130,12 +144,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_web"/>
             <EditText
+                android:textColor="@color/black_one"
                 android:id="@+id/modify_merchant_web"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -149,12 +165,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_card"/>
             <EditText
+                android:textColor="@color/black_one"
                 android:id="@+id/modify_merchant_card"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -168,12 +186,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_remark"/>
             <EditText
+                android:textColor="@color/black_one"
                 android:id="@+id/modify_merchant_remark"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"

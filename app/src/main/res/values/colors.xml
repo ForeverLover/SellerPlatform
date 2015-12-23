@@ -6,6 +6,8 @@
 
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="black_one">#686868</color>
+    <color name="black_two">#898989</color>
     <color name="half_white">#80ffffff</color>
 
     <color name="tab_colo_checked">#20bafb</color>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <EditText
+       android:padding="@dimen/dp_five"
+        android:id="@+id/menuitem_item_name"
+        android:layout_width="@dimen/dp_zero"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+
+        android:background="@color/et_bg"
+        android:textSize="@dimen/sp_eighteen"
+        />
+    <View
+        android:layout_width="@dimen/dp_five"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:padding="@dimen/dp_five"
+        android:background="@color/et_bg"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black_two"
+        android:layout_weight="2"
+        android:inputType="number"
+        android:id="@+id/menuitem_item_price"
+        android:layout_width="@dimen/dp_zero"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/sp_eighteen"
+        />
+</LinearLayout>

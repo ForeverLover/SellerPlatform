@@ -14,19 +14,25 @@
     <dimen name="dp_ten">10dp</dimen>
     <dimen name="dp_fifteen">15dp</dimen>
     <dimen name="dp_twenty">20dp</dimen>
+    <dimen name="dp_twenty_five">25dp</dimen>
     <dimen name="dp_thirty">30dp</dimen>
     <dimen name="dp_forty">40dp</dimen>
     <dimen name="dp_fifty">50dp</dimen>
     <dimen name="dp_sixty">60dp</dimen>
     <dimen name="dp_eighty">80dp</dimen>
     <dimen name="dp_hundred">100dp</dimen>
+    <dimen name="dp_hundred_fourty">140dp</dimen>
 
 
     <dimen name="sp_forteen">14sp</dimen>
+    <dimen name="sp_fifteen">15sp</dimen>
     <dimen name="sp_sixteen">16sp</dimen>
     <dimen name="sp_seventeen">17sp</dimen>
     <dimen name="sp_eighteen">18sp</dimen>
+    <dimen name="sp_nineteen">18sp</dimen>
     <dimen name="sp_twenty">20sp</dimen>
+    <dimen name="sp_twenty_two">22sp</dimen>
+    <dimen name="sp_twenty_five">25sp</dimen>
 
     <!-- 间距-->
     <dimen name="margin_s">6dp</dimen>

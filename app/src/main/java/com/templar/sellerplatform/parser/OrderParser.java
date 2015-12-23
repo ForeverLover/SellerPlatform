@@ -31,7 +31,7 @@ public class OrderParser {
         order.setBuyerName("張先生");
         order.setOrderNo("S023");
         order.setOrderAddr("台北市大安區忠孝東路27號-3");
-        order.setOrderTime("2011-12-34 19:18");
+        order.setOrderTime("2015-12-20 19:18");
         order.setOrderType("外帶");
         order.setOrderRemark("玉山銀行旁");
         List<OrderProduct> orderProductList = new ArrayList<OrderProduct>();
@@ -41,6 +41,7 @@ public class OrderParser {
         orderProduct.setProductType("大杯");
         orderProduct.setProductDescribe("去冰 微塘");
         orderProductList.add(orderProduct);
+        orderProduct = new OrderProduct();
         orderProduct.setAmount("1");
         orderProduct.setProductName("卡拉雞腿堡");
         orderProduct.setProductType(" 不加洋蔥");
@@ -72,7 +73,7 @@ public class OrderParser {
         order.setBuyerName("李先生");
         order.setOrderNo("S043");
         order.setOrderAddr("台北市大安區忠孝東路27號-3");
-        order.setOrderTime("2011-12-31 19:20");
+        order.setOrderTime("2015-12-21 19:21");
         order.setOrderType("外帶");
         order.setOrderRemark("玉山銀行旁");
         List<OrderProduct> orderProductList1 = new ArrayList<OrderProduct>();
@@ -82,10 +83,11 @@ public class OrderParser {
         orderProduct1.setProductType("大碗");
         orderProduct1.setProductDescribe("珍珠 花生 土豆");
         orderProductList1.add(orderProduct1);
+        orderProduct1 = new OrderProduct();
         orderProduct1.setAmount("2");
         orderProduct1.setProductName("多多綠茶");
         orderProduct1.setProductType(" 中杯");
-        orderProduct1.setProductDescribe("少冰 少糖珍珠");
+        orderProduct1.setProductDescribe("少冰 少糖 +珍珠");
         orderProductList1.add(orderProduct1);
         order.setProductList(orderProductList1);
         order.setOrderPrice("280");

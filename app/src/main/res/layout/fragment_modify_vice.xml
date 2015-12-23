@@ -5,6 +5,8 @@
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingLeft="@dimen/dp_ten"
+        android:paddingRight="@dimen/dp_ten"
         android:fillViewport="true"
         android:scrollbars="none">
 
@@ -12,8 +14,6 @@
             android:id="@+id/modify_vice_lv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_ten"
-            android:layout_marginRight="@dimen/dp_ten"
             android:layout_marginTop="@dimen/dp_five"
             android:listSelector="@android:color/transparent"
             android:divider="@drawable/shape_divideline_menu"
@@ -25,7 +25,7 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:id="@+id/menu_add_layout"
+        android:id="@+id/vice_add_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

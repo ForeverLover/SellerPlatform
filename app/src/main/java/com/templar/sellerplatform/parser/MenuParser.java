@@ -80,6 +80,14 @@ public class MenuParser {
         menuTab.setName("焗烤燴飯");
         menuTabList.add(menuTab);
 
+        menuTab = new MenuTab();
+        menuTab.setName("香辣雞翅");
+        menuTabList.add(menuTab);
+
+        menuTab = new MenuTab();
+        menuTab.setName("商務套餐");
+        menuTabList.add(menuTab);
+
         return menuTabList;
     }
 
@@ -91,34 +99,48 @@ public class MenuParser {
         SubMenu submenu = new SubMenu();
         submenu.setName("冰塊");
         submenu.setOn(true);
+        submenu.setId("1");
+        submenu.setType(1);
         menuTabList.add(submenu);
 
         submenu = new SubMenu();
         submenu.setOn(true);
+        submenu.setId("2");
+        submenu.setType(1);
         submenu.setName("甜度");
 
         menuTabList.add(submenu);
 
         submenu = new SubMenu();
         submenu.setName("加料");
+        submenu.setType(1);
+        submenu.setId("3");
         menuTabList.add(submenu);
 
         submenu = new SubMenu();
         submenu.setName("麵包");
+        submenu.setType(1);
+        submenu.setId("4");
         menuTabList.add(submenu);
 
         submenu = new SubMenu();
         submenu.setName("套餐");
+        submenu.setId("5");
+        submenu.setType(0);
         submenu.setOn(true);
         menuTabList.add(submenu);
 
         submenu = new SubMenu();
         submenu.setName("小點");
         submenu.setOn(true);
+        submenu.setId("6");
+        submenu.setType(0);
         menuTabList.add(submenu);
 
         submenu = new SubMenu();
         submenu.setName("燙頭");
+        submenu.setType(0);
+        submenu.setId("7");
         menuTabList.add(submenu);
 
         return menuTabList;

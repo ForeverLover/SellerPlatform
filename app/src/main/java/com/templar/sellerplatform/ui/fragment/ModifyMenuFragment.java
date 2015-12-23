@@ -1,5 +1,6 @@
 package com.templar.sellerplatform.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -14,10 +15,9 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.templar.sellerplatform.R;
 import com.templar.sellerplatform.config.BaseFragment;
 import com.templar.sellerplatform.entity.MenuTab;
-import com.templar.sellerplatform.entity.SubMenu;
+import com.templar.sellerplatform.listener.MyTabActivityResultListener;
 import com.templar.sellerplatform.parser.MenuParser;
 import com.templar.sellerplatform.ui.adapter.ModifyMenuFragmentAdapter;
-import com.templar.sellerplatform.ui.adapter.ToggleMenuFragmentAdapter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ import java.util.List;
  * 创建时间：2015/12/18 17:12
  * 描述：${todo}
  */
-public class ModifyMenuFragment extends BaseFragment implements ViewPager.OnPageChangeListener {
+public class ModifyMenuFragment extends BaseFragment implements ViewPager.OnPageChangeListener,MyTabActivityResultListener {
     @ViewInject(R.id.modify_scroll_layout)
     private HorizontalScrollView modify_scroll_layout;
     @ViewInject(R.id.modify_radio_layout)
@@ -39,6 +39,7 @@ public class ModifyMenuFragment extends BaseFragment implements ViewPager.OnPage
 
     private List<Fragment> fragmentList;
     private ModifyMenuFragmentAdapter menuFragmentAdapter;
+    private int currentIndex;
 
     @Override
     protected int getViewLayoutId() {
@@ -57,7 +58,7 @@ public class ModifyMenuFragment extends BaseFragment implements ViewPager.OnPage
         if (menuTabList != null && !menuTabList.isEmpty()) {
             fragmentList = new ArrayList<Fragment>();
             for (int i = 0; i < menuTabList.size(); i++) {
-                ModifySubMenuFragment fragment =new  ModifySubMenuFragment();
+                ModifySubMenuFragment fragment = new ModifySubMenuFragment();
                 Bundle args = new Bundle();
                 args.putSerializable("subMenuList", (Serializable) menuTabList.get(i).getSubMenuList());
                 fragment.setArguments(args);
@@ -89,6 +90,7 @@ public class ModifyMenuFragment extends BaseFragment implements ViewPager.OnPage
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 modify_veiewpager.setCurrentItem(checkedId);
+                currentIndex = checkedId;
             }
         });
     }
@@ -102,6 +104,7 @@ public class ModifyMenuFragment extends BaseFragment implements ViewPager.OnPage
     @Override
     public void onPageSelected(int position) {
         setTab(position);
+        currentIndex = position;
     }
 
     @Override
@@ -120,4 +123,24 @@ public class ModifyMenuFragment extends BaseFragment implements ViewPager.OnPage
         int len = left + width / 2 - screenWidth / 2;
         modify_scroll_layout.smoothScrollTo(len, 0);
     }
+
+   /* @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+    }*/
+
+    @Override
+    public void onTabActivityResult(int requestCode, int resultCode, Intent data) {
+        Fragment fragment = fragmentList.get(currentIndex);
+        if (fragment != null) {
+            if (fragment instanceof MyTabActivityResultListener) {
+                MyTabActivityResultListener listener = (MyTabActivityResultListener) fragment;
+                listener.onTabActivityResult(requestCode, resultCode, data);
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }
+
+

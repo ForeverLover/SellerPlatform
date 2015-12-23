@@ -134,6 +134,7 @@ public class SettingsFragment extends BaseFragment implements MyTabActivityResul
 
     @Override
     public void onTabActivityResult(int requestCode, int resultCode, Intent data) {
+        MLog.v("Tag", "settings resultcode:" + resultCode + " data==null?" + (data == null) +" requestCode:"+requestCode);
         if (getActivity().RESULT_OK == resultCode && data != null) {
             switch (requestCode) {
                 case Constants.Code.MODIFY_MERCHANT:

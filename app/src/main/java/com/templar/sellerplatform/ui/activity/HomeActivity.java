@@ -3,7 +3,6 @@ package com.templar.sellerplatform.ui.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import com.templar.sellerplatform.R;
 import com.templar.sellerplatform.config.BaseActivity;
 import com.templar.sellerplatform.listener.MyTabActivityResultListener;
+import com.templar.sellerplatform.utils.MLog;
 import com.templar.sellerplatform.utils.TabUtils;
 import com.templar.sellerplatform.widget.MyFragmentTabHost;
 
@@ -90,6 +90,7 @@ public class HomeActivity extends BaseActivity implements TabHost.OnTabChangeLis
 //            //转发请求到子Activity
 //            listener.onTabActivityResult(requestCode, resultCode, data);
 //        }
+        MLog.v("Tag", "home resultcode:" + resultCode + " data==null?" + (data == null) +" requestCode:"+requestCode);
         for (Fragment fragment:getSupportFragmentManager().getFragments()){
             if (fragment instanceof  MyTabActivityResultListener){
                 MyTabActivityResultListener listener= (MyTabActivityResultListener) fragment;

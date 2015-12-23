@@ -12,7 +12,7 @@
             android:id="@+id/order_item_product_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_twenty"
+            android:textSize="@dimen/sp_seventeen"
             android:layout_marginRight="@dimen/dp_five"
             android:textColor="@color/black"
             android:text="卡拉雞翅煲 不加洋蔥"/>
@@ -21,14 +21,14 @@
             android:id="@+id/order_item_product_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_twenty"
+            android:textSize="@dimen/sp_seventeen"
             android:textColor="@color/black"
             android:text="X2"/>
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/sp_sixteen"
+        android:textSize="@dimen/sp_fifteen"
         android:layout_marginLeft="@dimen/dp_twenty"
         android:layout_marginRight="@dimen/dp_twenty"
         android:lineSpacingMultiplier="1.1"

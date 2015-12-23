@@ -62,14 +62,14 @@
     <string name="alter_confpwd_eror">兩次填入密碼不一致，請核實</string>
 
     <!--訂單列表-->
-    <string name="order_addr">地址：</string>
+    <string name="order_addr">地址:</string>
     <string name="order_remark">備註:</string>
     <string name="order_second">秒鐘前</string>
     <string name="order_minute">分鐘前</string>
     <string name="order_hour">小時前</string>
     <string name="order_day">天前</string>
     <string name="order_month">月前</string>
-    <string name="order_year">年前:</string>
+    <string name="order_year">年前</string>
     <string name="order_total">總計:</string>
     <string name="order_type_out">外帶</string>
     <string name="unit_yuan_text">元</string>
@@ -86,5 +86,41 @@
     <!--编辑菜单-->
     <string name="menu_single_add">新增单品</string>
     <string name="menu_vice_add">新增副选项</string>
+
+    <!--新增单品-->
+    <string name="single_title_hint">填入项目名稱</string>
+    <string name="single_item_label">款式</string>
+    <string name="single_item_name_hint">填入款式名稱</string>
+    <string name="single_item_money_hint">填入金额</string>
+    <string name="single_item_add">新增款式</string>
+    <string name="single_vice_label">副選項問答</string>
+    <string name="single_vice_necessary">必選項</string>
+    <string name="single_vice_unnecessary">非必選項/加選</string>
+    <string name="single_vice_add">加入副選項</string>
+    <string name="single_vice_add_title">選擇問答副選項</string>
+    <string name="single_cancel">取消</string>
+    <string name="single_ensure">確認</string>
+    <string name="single_finish">完成</string>
+    <string name="single_vice_config_title">選擇問答副選項</string>
+    <string name="single_title_null">請填入项目名稱</string>
+    <string name="single_item_null">請確保至少包含一項款式</string>
+
+    <!--新增選項-->
+    <string name="vice_title_hint">填入選單名稱</string>
+    <string name="vice_necessary_label">必選</string>
+    <string name="vice_unecessary_label">非必選</string>
+    <string name="vice_prefix">總共</string>
+    <string name="vice_item_unit">項</string>
+    <string name="vice_middlefix">選擇</string>
+    <string name="vice_item_label">選項</string>
+    <string name="vice_item_name_hint">填入選項名稱</string>
+    <string name="vice_item_money_hint">填入金額</string>
+    <string name="vice_item_add">新增選項</string>
+
+    <string name="vice_less">至少</string>
+    <string name="vice_more">至多</string>
+    <string name="vice_item_null">请确保該選單至少包含一则選項</string>
+    <string name="vice_item_more">當前設置的選擇數目大於實際數據數目，請核實</string>
+
 
 </resources>

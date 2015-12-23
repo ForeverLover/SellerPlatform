@@ -13,6 +13,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.templar.sellerplatform.R;
 import com.templar.sellerplatform.entity.Order;
 import com.templar.sellerplatform.ui.adapter.base.BaseRecyclerAdapter;
+import com.templar.sellerplatform.utils.StringUtils;
 import com.templar.sellerplatform.widget.CustomListView;
 
 import java.util.List;
@@ -45,12 +46,13 @@ public class OrderRecyclerAdapter extends BaseRecyclerAdapter<RecyclerView.ViewH
         super.onRealBindViewHolder(viewHolder, position);
         final Order order = getItem(position);
         if (order != null) {
+
             ViewHolder holder = (ViewHolder) viewHolder;
             holder.order_addr_tv.setText(order.getOrderAddr());
             holder.order_remark_tv.setText(order.getOrderRemark());
             holder.order_item_orderNo.setText(order.getOrderNo());
             holder.order_item_type.setText(order.getOrderType());
-            holder.order_item_buyerTime.setText(order.getBuyerName() + " " + order.getOrderTime());
+            holder.order_item_buyerTime.setText(order.getBuyerName() + " " + StringUtils.getTweenTime(order.getOrderTime(),mContext));
             holder.order_item_totalPrice.setText(order.getOrderPrice() + mContext.getString(R.string.unit_yuan_text));
             if (order.getProductList() != null && !order.getProductList().isEmpty()) {
                 adapter = new OrderProductAdapter(order.getProductList(), mContext);

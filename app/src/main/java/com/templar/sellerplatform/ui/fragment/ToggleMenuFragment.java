@@ -77,6 +77,7 @@ public class ToggleMenuFragment extends BaseFragment implements ViewPager.OnPage
             toggle_radio_layout.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    MLog.v("Tag","toggle-check:"+checkedId);
                     toggle_veiewpager.setCurrentItem(checkedId);
                 }
             });

@@ -35,22 +35,47 @@ public class Constants {
         String URL_PREFIX_FILE = Url.BASE_URL + "/";
     }
 
-    public interface Intent{
-        interface Variable{
-            String MERCHANT_INFO="merchant_info";
-            String ADMINISTRATOR_INFO="administrator_info";
-            String ADMINISTRATOR_SUPER_PWD="administrator's_super_pwd";
+    public interface Intent {
+        interface Variable {
+            String MERCHANT_INFO = "merchant_info";
+            String ADMINISTRATOR_INFO = "administrator_info";
+            String ADMINISTRATOR_SUPER_PWD = "administrator's_super_pwd";
+            String MENU_SINGLE = "menu_single";
+            String MENU_SINGLE_ID = "menu_single_id";
+            String MENU_VICE = "menu_vice";
+            String MENU_VICE_ID = "menu_vice_id";
         }
-        interface Action{
+
+        interface Action {
 
         }
     }
 
-    public interface Code{
+    public interface Code {
         /**
          * 修改商铺信息
          */
-        static final int MODIFY_MERCHANT =300;
-        static final int MODIFY_SUPER_CODE=301;
+        int MODIFY_MERCHANT = 300;
+        int MODIFY_SUPER_CODE = 301;
+        /**
+         * 新增菜单单品
+         */
+        int ADD_MENU_SINGLE = 302;
+        /**
+         * 编辑菜单单品
+         */
+        int MODIFY_MENU_SINGLE = 303;
+        /**
+         * 菜單新增副選項
+         */
+        int ADD_MENU_VICE = 304;
+        /**
+         * 编辑副選項
+         */
+        int MODIFY_MENU_VICE = 305;
+        /**
+         * 新增副选项
+         */
+        int ADD_VICE = 306;
     }
 }

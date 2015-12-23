@@ -43,8 +43,7 @@ public class ModifyMerchantInformationActivity extends BaseActivity {
     @ViewInject(R.id.modify_merchant_remark)
     private EditText modify_merchant_remark;
 
-    @ViewInject(R.id.modify_merchant_save_btn)
-    private TextView modify_merchant_save_btn;
+
 
     private MerchantInformation originInformation;
 

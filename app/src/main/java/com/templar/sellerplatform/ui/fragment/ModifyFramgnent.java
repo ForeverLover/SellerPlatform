@@ -1,8 +1,10 @@
 package com.templar.sellerplatform.ui.fragment;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.RadioGroup;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.templar.sellerplatform.R;
 import com.templar.sellerplatform.config.BaseFragment;
+import com.templar.sellerplatform.listener.MyTabActivityResultListener;
 
 /**
  * 项目:SellerPlatform
@@ -105,6 +108,7 @@ public class ModifyFramgnent extends BaseFragment{
 
     // 当fragment已被实例化，就隐藏起来
     public void hideFragments(FragmentTransaction ft) {
+
         if (modifyMenuFragment != null)
             ft.hide(modifyMenuFragment);
         if (modifyViceFragment != null)
@@ -112,6 +116,15 @@ public class ModifyFramgnent extends BaseFragment{
 
     }
 
-
-
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        for (Fragment fragment:getChildFragmentManager().getFragments()){
+            if (fragment instanceof MyTabActivityResultListener){
+                MyTabActivityResultListener listener= (MyTabActivityResultListener) fragment;
+                listener.onTabActivityResult(requestCode, resultCode, data);
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }
