@@ -4,29 +4,31 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbars="none"
-    android:background="@drawable/page_bg">
+    android:background="@mipmap/page_bg2">
 
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="@dimen/dp_thirty">
+        android:layout_marginTop="@dimen/dp_fifty_five"
+       android:paddingLeft="@dimen/dp_forty_one"
+        android:paddingRight="@dimen/dp_forty_one">
 
         <TextView
-            android:textColor="@color/black_one"
+            android:textColor="#5e5e60"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/account_title"
-            android:textSize="@dimen/sp_twenty" />
+            android:textSize="@dimen/sp_twenty_four" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/dp_twenty"
+            android:paddingLeft="@dimen/dp_fifteen"
             android:paddingRight="@dimen/dp_twenty"
             android:orientation="vertical">
             <LinearLayout
-                android:layout_marginTop="@dimen/dp_fifteen"
+                android:layout_marginTop="@dimen/dp_twenty_three"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -48,7 +50,7 @@
                     android:text=""/>
             </LinearLayout>
             <LinearLayout
-                android:layout_marginTop="@dimen/dp_fifteen"
+                android:layout_marginTop="@dimen/dp_twenty_three"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -70,7 +72,7 @@
                     android:text=""/>
             </LinearLayout>
             <LinearLayout
-                android:layout_marginTop="@dimen/dp_fifteen"
+                android:layout_marginTop="@dimen/dp_twenty_two"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -89,9 +91,10 @@
                     <TextView
                         android:background="@drawable/solid_rounded_box_orange"
                         android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/dp_hundred_eighteen"
+                        android:layout_height="@dimen/dp_twenty_eight"
                         android:textSize="@dimen/sp_sixteen"
+                        android:gravity="center"
                         android:paddingLeft="@dimen/dp_fifteen"
                         android:paddingBottom="@dimen/dp_two"
                         android:paddingTop="@dimen/dp_two"
@@ -100,7 +103,7 @@
                 </RelativeLayout>
             </LinearLayout>
             <LinearLayout
-                android:layout_marginTop="@dimen/dp_fifteen"
+                android:layout_marginTop="@dimen/dp_twenty_two"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -122,12 +125,13 @@
             </LinearLayout>
         </LinearLayout>
         <TextView
-            android:layout_marginTop="@dimen/dp_sixty"
+            android:layout_marginLeft="@dimen/dp_two"
+            android:layout_marginTop="@dimen/dp_eighty_four"
             android:textColor="@color/black_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/account_op_pwd"
-            android:textSize="@dimen/sp_seventeen" />
+            android:textSize="@dimen/sp_twenty" />
         <LinearLayout
             android:layout_marginTop="@dimen/dp_five"
             android:layout_width="match_parent"
@@ -140,8 +144,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingRight="@dimen/dp_twenty"
-                android:background="@color/et_bg"
+                android:background="#ebebeb"
                 android:textSize="@dimen/sp_sixteen"
+                android:textColor="#565656"
                 android:text="Sa14b283kk"
 
                android:layout_marginLeft="@dimen/dp_fifty"
@@ -149,18 +154,19 @@
             <TextView
                 android:layout_marginTop="@dimen/dp_fifteen"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="@dimen/dp_fifty"
-                android:layout_marginRight="@dimen/dp_fifty"
+                android:layout_marginLeft="@dimen/dp_seventeen"
+                android:layout_marginRight="@dimen/dp_seventeen"
                 android:text="@string/account_tip_one"
                 android:textSize="@dimen/sp_forteen"
-                android:lineSpacingExtra="@dimen/dp_one"
+                android:lineSpacingMultiplier="1.4"
                 android:layout_height="wrap_content" />
+                <!--android:lineSpacingExtra="@dimen/dp_two"-->
             <TextView
-                android:layout_marginTop="@dimen/dp_five"
+                android:layout_marginTop="@dimen/dp_seven"
                 android:layout_width="wrap_content"
                 android:text="@string/account_tip_two"
                 android:layout_gravity="center_horizontal"
-                android:lineSpacingMultiplier="1.2"
+                android:lineSpacingMultiplier="1.4"
                 android:textSize="@dimen/sp_forteen"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -174,26 +180,21 @@
             android:orientation="horizontal">
             <TextView
                 android:id="@+id/user_cancel_btn"
+                android:gravity="center"
                 android:textColor="@color/tab_colo_checked"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/dp_sixty_three"
+                android:layout_height="@dimen/dp_thirty"
                 android:text="@string/account_cancel"
-                android:paddingLeft="@dimen/dp_twenty"
-                android:paddingRight="@dimen/dp_twenty"
-                android:paddingBottom="@dimen/dp_five"
-                android:paddingTop="@dimen/dp_five"
-                android:background="@color/white"/>
+                android:background="@drawable/btn_comment_bg"/>
             <TextView
                 android:id="@+id/user_ensure_btn"
+                android:gravity="center"
                 android:layout_marginLeft="@dimen/dp_five"
-                android:background="@color/tab_colo_checked"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/btn_special_bg"
+                android:layout_width="@dimen/dp_sixty_three"
+                android:layout_height="@dimen/dp_thirty"
                 android:text="@string/account_ensure"
-                android:paddingLeft="@dimen/dp_twenty"
-                android:paddingRight="@dimen/dp_twenty"
-                android:paddingBottom="@dimen/dp_five"
-                android:paddingTop="@dimen/dp_five"
+                android:textSize="@dimen/sp_sixteen"
                 android:textColor="@color/white"/>
         </LinearLayout>
 

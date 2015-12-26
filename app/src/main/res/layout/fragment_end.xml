@@ -2,6 +2,9 @@
 <com.templar.sellerplatform.widget.CustomSwipRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:id="@+id/end_swiprefresh_layout"
+    android:paddingLeft="@dimen/dp_fifteen"
+    android:paddingRight="@dimen/dp_fifteen"
+    android:paddingTop="@dimen/dp_five"
     android:layout_height="match_parent">
 
     <com.templar.sellerplatform.widget.morerecyclerview.MoreRecyclerView

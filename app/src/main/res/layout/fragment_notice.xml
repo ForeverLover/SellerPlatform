@@ -2,12 +2,15 @@
 <com.templar.sellerplatform.widget.CustomSwipRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/notice_refreshLayout"
     android:layout_width="match_parent"
+    android:paddingLeft="@dimen/dp_fifteen"
+    android:paddingRight="@dimen/dp_fifteen"
+    android:background="@mipmap/page_bg2"
+    android:paddingTop="@dimen/dp_five"
     android:layout_height="match_parent">
 
     <com.templar.sellerplatform.widget.morerecyclerview.MoreRecyclerView
         android:id="@+id/notice_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:scrollbars="none" />
 </com.templar.sellerplatform.widget.CustomSwipRefreshLayout>

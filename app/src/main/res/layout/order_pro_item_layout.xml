@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_nine"
+    android:paddingRight="@dimen/dp_forteen"
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,17 +24,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/sp_seventeen"
-            android:textColor="@color/black"
+            android:textColor="#140805"
             android:text="X2"/>
     </RelativeLayout>
     <TextView
+        android:textColor="#383839"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/sp_fifteen"
-        android:layout_marginLeft="@dimen/dp_twenty"
-        android:layout_marginRight="@dimen/dp_twenty"
+        android:layout_marginLeft="@dimen/dp_nineteen"
+        android:layout_marginRight="@dimen/dp_nineteen"
         android:lineSpacingMultiplier="1.1"
-        android:layout_marginTop="@dimen/dp_two"
+        android:layout_marginTop="@dimen/dp_seven"
         android:text="少冰少糖 +珍珠"
         android:id="@+id/order_item_proInfo"/>
 

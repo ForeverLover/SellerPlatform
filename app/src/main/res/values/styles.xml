@@ -20,6 +20,9 @@
     <style name="CustomCheckboxTheme" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="android:button">@drawable/custom_cb_selector</item>
     </style>
+    <style name="CustomCheckboxSmallTheme" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/custom_cb_selector_small</item>
+    </style>
 
 
 </resources>

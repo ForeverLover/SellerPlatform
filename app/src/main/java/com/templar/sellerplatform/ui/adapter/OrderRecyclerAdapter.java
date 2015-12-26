@@ -52,7 +52,7 @@ public class OrderRecyclerAdapter extends BaseRecyclerAdapter<RecyclerView.ViewH
             holder.order_remark_tv.setText(order.getOrderRemark());
             holder.order_item_orderNo.setText(order.getOrderNo());
             holder.order_item_type.setText(order.getOrderType());
-            holder.order_item_buyerTime.setText(order.getBuyerName() + " " + StringUtils.getTweenTime(order.getOrderTime(),mContext));
+            holder.order_item_buyerTime.setText(order.getBuyerName() + " - " + StringUtils.getTweenTime(order.getOrderTime(),mContext));
             holder.order_item_totalPrice.setText(order.getOrderPrice() + mContext.getString(R.string.unit_yuan_text));
             if (order.getProductList() != null && !order.getProductList().isEmpty()) {
                 adapter = new OrderProductAdapter(order.getProductList(), mContext);

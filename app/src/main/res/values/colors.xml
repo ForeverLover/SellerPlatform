@@ -8,16 +8,28 @@
     <color name="black">#000000</color>
     <color name="black_one">#686868</color>
     <color name="black_two">#898989</color>
+    <color name="black_three">#222222</color>
     <color name="half_white">#80ffffff</color>
+    <color name="four_white">#40ffffff</color>
+    <color name="five_white">#50ffffff</color>
 
-    <color name="tab_colo_checked">#20bafb</color>
-    <color name="tab_colo_uncheck">#686868</color>
+    <color name="tab_colo_checked">#15c2fe</color>
+    <color name="tab_colo_uncheck">#565656</color>
+
+    <color name="page_color_checked">#01beff</color>
+    <color name="page_color_uncheck">#4d4d4d</color>
 
     <color name="et_hint_color">#666666</color>
     <color name="et_bg">#ececea</color>
+    <color name="et_bg_2">#e4e4d9</color>
     <color name="light_gray">#999999</color>
+    <color name="toggle_rb_uncheck">#c8c8c8</color>
+    <color name="toggle_rb_checked">#01beff</color>
+
 
     <color name="split_line_color">#696969</color>
+    <color name="split_line_color_two">#cacaca</color>
+    <color name="split_line_color_three">#c4c4c4</color>
 
     <color name="category_tab_text">#ff707070</color>
     <color name="category_tab_text_dark">#fffafafa</color>
@@ -26,5 +38,8 @@
     <color name="category_tab_highlight_bg">#ffd43d3d</color>
     <color name="category_tab_highlight_dark_bg">#fffafafa</color>
     <color name="txt_orange">#e68e5e</color>
+
+    <color name="merchant_label">#5c5d5d</color>
+    <color name="merchant_text">#878787</color>
 
 </resources>

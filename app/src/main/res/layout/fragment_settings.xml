@@ -18,8 +18,8 @@
 
             <ImageView
                 android:id="@+id/merchant_img_iv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/dp_seventy_three"
+                android:layout_height="@dimen/dp_seventy_three"
                 android:layout_marginBottom="@dimen/dp_forty"
                 android:scaleType="centerCrop" />
 
@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:orientation="horizontal"
-                android:paddingLeft="@dimen/dp_twenty"
+                android:paddingLeft="@dimen/dp_forty_two"
                 android:paddingRight="@dimen/dp_twenty">
 
                 <com.templar.sellerplatform.widget.CornerImageView
@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:layout_marginLeft="@dimen/dp_ten"
-                    android:textColor="@color/black"
+                    android:textColor="#0c0c0b"
                     android:textSize="@dimen/sp_twenty" />
             </LinearLayout>
         </RelativeLayout>
@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:text="@string/settings_alter"
-                    android:textColor="@color/black_one"
+                    android:textColor="#cdcdcd"
                     android:textSize="@dimen/sp_sixteen" />
 
                 <ImageView
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/settings_id"
-                    android:textColor="@color/black"
+                    android:textColor="@color/merchant_label"
                     android:textSize="@dimen/sp_sixteen" />
 
                 <TextView
@@ -100,7 +100,7 @@
                     android:layout_width="@dimen/dp_zero"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:textColor="@color/black_one"
+                    android:textColor="@color/merchant_text"
                     android:textSize="@dimen/sp_fifteen" />
             </LinearLayout>
 
@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/settings_addr"
-                    android:textColor="@color/black"
+                    android:textColor="@color/merchant_label"
                     android:textSize="@dimen/sp_sixteen" />
 
                 <TextView
@@ -123,7 +123,7 @@
                     android:layout_width="@dimen/dp_zero"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:textColor="@color/black_one"
+                    android:textColor="@color/merchant_text"
                     android:textSize="@dimen/sp_fifteen" />
             </LinearLayout>
 
@@ -138,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/settings_link"
-                    android:textColor="@color/black"
+                    android:textColor="@color/merchant_label"
                     android:textSize="@dimen/sp_sixteen" />
 
                 <TextView
@@ -146,7 +146,7 @@
                     android:layout_width="@dimen/dp_zero"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:textColor="@color/black_one"
+                    android:textColor="@color/merchant_text"
                     android:textSize="@dimen/sp_fifteen" />
             </LinearLayout>
 
@@ -161,7 +161,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/settings_onTime"
-                    android:textColor="@color/black"
+                    android:textColor="@color/merchant_label"
                     android:textSize="@dimen/sp_sixteen" />
 
                 <TextView
@@ -169,7 +169,7 @@
                     android:layout_width="@dimen/dp_zero"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:textColor="@color/black_one"
+                    android:textColor="@color/merchant_text"
                     android:textSize="@dimen/sp_fifteen" />
             </LinearLayout>
 
@@ -184,7 +184,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/settings_web"
-                    android:textColor="@color/black"
+                    android:textColor="@color/merchant_label"
                     android:textSize="@dimen/sp_sixteen" />
 
                 <TextView
@@ -192,7 +192,7 @@
                     android:layout_width="@dimen/dp_zero"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:textColor="@color/black_one"
+                    android:textColor="@color/merchant_text"
                     android:textSize="@dimen/sp_fifteen" />
             </LinearLayout>
 
@@ -207,7 +207,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/settings_remark"
-                    android:textColor="@color/black"
+                    android:textColor="@color/merchant_label"
                     android:textSize="@dimen/sp_sixteen" />
 
                 <TextView
@@ -216,7 +216,7 @@
                     android:layout_width="@dimen/dp_zero"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:textColor="@color/black_one"
+                    android:textColor="@color/merchant_text"
                     android:textSize="@dimen/sp_fifteen" />
             </LinearLayout>
 
@@ -231,7 +231,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/settings_card"
-                    android:textColor="@color/black"
+                    android:textColor="@color/merchant_label"
                     android:textSize="@dimen/sp_sixteen" />
 
                 <TextView
@@ -239,7 +239,7 @@
                     android:layout_width="@dimen/dp_zero"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:textColor="@color/black_one"
+                    android:textColor="@color/merchant_text"
                     android:textSize="@dimen/sp_fifteen" />
             </LinearLayout>
 

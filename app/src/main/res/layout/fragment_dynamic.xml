@@ -6,9 +6,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:paddingTop="@dimen/dp_ten"
-        android:paddingLeft="@dimen/dp_ten"
-        android:paddingRight="@dimen/dp_ten"
+        android:paddingTop="@dimen/dp_fifteen"
+        android:paddingLeft="@dimen/dp_nineteen"
+        android:paddingRight="@dimen/dp_nineteen"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,18 +18,21 @@
             android:id="@+id/dynamic_cb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/CustomCheckboxTheme"
+            style="@style/CustomCheckboxSmallTheme"
             android:background="@android:color/transparent"/>
 
         <RadioGroup
             android:id="@+id/dynamic_rg"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
 
             android:gravity="center">
 
             <RadioButton
+                android:background="@android:color/transparent"
+                android:paddingTop="@dimen/dp_twelve"
+                android:paddingBottom="@dimen/dp_nine"
                 android:checked="true"
                 android:textColor="@color/rb_text_selector"
                 android:id="@+id/dynamic_notice_btn"
@@ -41,6 +44,9 @@
                 android:button="@null" />]
 
             <RadioButton
+                android:background="@android:color/transparent"
+                android:paddingTop="@dimen/dp_twelve"
+                android:paddingBottom="@dimen/dp_nine"
                 android:textColor="@color/rb_text_selector"
                 android:id="@+id/dynamic_deal_btn"
                 android:layout_width="0dp"
@@ -51,6 +57,9 @@
                 android:button="@null" />
 
             <RadioButton
+                android:background="@android:color/transparent"
+                android:paddingTop="@dimen/dp_twelve"
+                android:paddingBottom="@dimen/dp_nine"
                 android:textColor="@color/rb_text_selector"
                 android:id="@+id/dynamic_wait_btn"
                 android:layout_width="0dp"
@@ -61,6 +70,9 @@
                 android:button="@null" />
 
             <RadioButton
+                android:background="@android:color/transparent"
+                android:paddingTop="@dimen/dp_twelve"
+                android:paddingBottom="@dimen/dp_nine"
                 android:textColor="@color/rb_text_selector"
                 android:id="@+id/dynamic_end_btn"
                 android:layout_width="0dp"
@@ -81,5 +93,6 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/dynamic_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
 </LinearLayout>

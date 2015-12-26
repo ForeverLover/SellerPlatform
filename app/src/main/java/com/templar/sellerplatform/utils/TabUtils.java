@@ -20,7 +20,7 @@ public class TabUtils {
 
         public static int[] tabsCheckedImg = {R.mipmap.dynamic_img_checked, R.mipmap.toggle_img_checked, R.mipmap.edit_img_checked, R.mipmap.settings_img_checked};
 
-        public static int[] tabUncheckImg = {R.mipmap.dynamic_img_uncheck, R.mipmap.toogle_img_uncheck, R.mipmap.edit_img_uncheck, R.mipmap.settings_img_uncheck};
+        public static int[] tabUncheckImg = {R.mipmap.dynamic_img_uncheck, R.mipmap.toggle_img_uncheck, R.mipmap.edit_img_uncheck, R.mipmap.settings_img_uncheck};
 
         public static Class[] TabFragment = {DynamicFragment.class, ToggleFragment.class, ModifyFramgnent.class, SettingsFragment.class};
     }

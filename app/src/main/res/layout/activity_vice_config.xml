@@ -2,32 +2,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/page_bg">
+    android:background="@mipmap/page_bg2">
     <ScrollView
         android:layout_above="@+id/menuitem_vice_finishBtn"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:paddingLeft="@dimen/dp_twenty"
-        android:paddingRight="@dimen/dp_twenty"
         android:scrollbars="none">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-                android:layout_marginTop="@dimen/dp_thirty"
+                android:layout_marginTop="@dimen/dp_forty_seven"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/dp_twenty"
+                android:textSize="@dimen/sp_twenty"
                 android:text="@string/single_vice_config_title"
+                android:textColor="#3b3c3d"
                 android:gravity="center"/>
             <com.templar.sellerplatform.widget.CustomListView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_thirty"
                 android:id="@+id/menuitem_vice_lv"
-                android:divider="@null"
+                android:divider="@drawable/shape_divideline_menu"
                 android:listSelector="@android:color/transparent">
             </com.templar.sellerplatform.widget.CustomListView>
         </LinearLayout>
@@ -39,7 +38,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/menuitem_vice_finishBtn"
         android:layout_marginLeft="@dimen/dp_five"
-        android:background="@color/tab_colo_checked"
+        android:background="@drawable/btn_special_bg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/single_finish"

@@ -46,7 +46,7 @@ public class ModifyFramgnent extends BaseFragment{
         modify_layout.check(R.id.toggle_menu_rb);
         showFragment(0);
         modify_menu_rb.setTextColor(getResources().getColor(R.color.white));
-        modify_menu_rb.setBackgroundResource(R.drawable.btn_special_bg);
+        modify_menu_rb.setBackgroundResource(R.drawable.rb_special_bg);
     }
 
     @Override
@@ -59,15 +59,15 @@ public class ModifyFramgnent extends BaseFragment{
                 switch (checkedId) {
                     case R.id.modify_menu_rb:
                         modify_menu_rb.setTextColor(getResources().getColor(R.color.white));
-                        modify_menu_rb.setBackgroundResource(R.drawable.btn_special_bg);
-                        modify_vice_rb.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
+                        modify_menu_rb.setBackgroundResource(R.drawable.rb_special_bg);
+                        modify_vice_rb.setTextColor(getResources().getColor(R.color.toggle_rb_uncheck));
                         modify_vice_rb.setBackground(null);
                         showFragment(0);
                         break;
                     case R.id.modify_vice_rb:
                         modify_vice_rb.setTextColor(getResources().getColor(R.color.white));
-                        modify_vice_rb.setBackgroundResource(R.drawable.btn_special_bg);
-                        modify_menu_rb.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
+                        modify_vice_rb.setBackgroundResource(R.drawable.rb_special_bg);
+                        modify_menu_rb.setTextColor(getResources().getColor(R.color.toggle_rb_uncheck));
                         modify_menu_rb.setBackground(null);
                         showFragment(1);
                         break;

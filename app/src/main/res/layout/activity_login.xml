@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_centerInParent="true"
@@ -23,9 +24,11 @@
                 android:src="@mipmap/login_user_img" />
 
             <EditText
+                android:textCursorDrawable="@null"
+                android:background="@drawable/login_et_bg"
                 android:id="@+id/login_user_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/dp_forty"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/dp_five" />
         </LinearLayout>
@@ -33,7 +36,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_ten"
+            android:layout_marginTop="@dimen/dp_twenty"
             android:orientation="horizontal">
 
             <ImageView
@@ -43,20 +46,30 @@
                 android:src="@mipmap/login_pwd_img" />
 
             <EditText
+                android:textCursorDrawable="@null"
+                android:inputType="textPassword"
                 android:id="@+id/login_pwd_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/dp_forty"
                 android:layout_gravity="center_vertical"
+                android:background="@drawable/login_et_bg"
                 android:layout_marginLeft="@dimen/dp_five" />
         </LinearLayout>
 
-        <Button
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/dp_five"
+            android:paddingBottom="@dimen/dp_five"
+            android:paddingLeft="@dimen/dp_twenty_five"
+            android:paddingRight="@dimen/dp_twenty_five"
             android:id="@+id/login_submit_btn"
-            android:layout_marginTop="@dimen/dp_thirty"
-            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dp_fifty"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/login_submit"
-            android:textSize="@dimen/sp_eighteen" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_eighteen"
+            android:background="@drawable/btn_special_bg"/>
     </LinearLayout>
 
 </RelativeLayout>

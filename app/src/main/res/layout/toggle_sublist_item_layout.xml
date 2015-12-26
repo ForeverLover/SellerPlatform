@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:paddingTop="@dimen/dp_ten"
+    android:paddingBottom="@dimen/dp_ten"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/dp_twenty"
-    android:paddingRight="@dimen/dp_twenty"
-    android:paddingTop="@dimen/dp_ten"
-    android:paddingBottom="@dimen/dp_ten">
+    android:paddingRight="@dimen/dp_forteen">
 
     <TextView
         android:layout_centerVertical="true"
         android:id="@+id/toggle_sublist_item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="#121213"
         android:layout_marginRight="@dimen/dp_ten"
         android:layout_toLeftOf="@+id/toggle_sublist_item_cb"
         android:textSize="@dimen/sp_seventeen" />
@@ -25,5 +25,5 @@
         android:id="@+id/toggle_sublist_item_cb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/CustomCheckboxTheme"/>
+        style="@style/CustomCheckboxSmallTheme"/>
 </RelativeLayout>

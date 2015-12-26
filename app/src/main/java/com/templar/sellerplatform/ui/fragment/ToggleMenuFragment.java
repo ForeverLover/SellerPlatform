@@ -69,15 +69,16 @@ public class ToggleMenuFragment extends BaseFragment implements ViewPager.OnPage
 
                 RadioGroup.LayoutParams params = new
                         RadioGroup.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT,
-                        RadioGroup.LayoutParams.WRAP_CONTENT);
-
+                        RadioGroup.LayoutParams.MATCH_PARENT);
+//                params.topMargin = 30;
+//                params.bottomMargin = 30;
                 toggle_radio_layout.addView(rb, params);
             }
             toggle_radio_layout.check(0);
             toggle_radio_layout.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
-                    MLog.v("Tag","toggle-check:"+checkedId);
+                    MLog.v("Tag", "toggle-check:" + checkedId);
                     toggle_veiewpager.setCurrentItem(checkedId);
                 }
             });
@@ -89,8 +90,6 @@ public class ToggleMenuFragment extends BaseFragment implements ViewPager.OnPage
             toggle_veiewpager.addOnPageChangeListener(this);
         }
     }
-
-
 
 
     @Override

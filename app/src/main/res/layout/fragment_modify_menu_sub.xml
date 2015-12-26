@@ -6,15 +6,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
+        android:paddingLeft="@dimen/dp_ten"
+        android:paddingRight="@dimen/dp_eight"
         android:scrollbars="none">
 
         <com.templar.sellerplatform.widget.CustomListView
             android:id="@+id/modify_submenu_lv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_ten"
-            android:layout_marginRight="@dimen/dp_ten"
-            android:layout_marginTop="@dimen/dp_five"
+            android:layout_marginTop="@dimen/dp_six"
             android:listSelector="@android:color/transparent"
             android:divider="@drawable/shape_divideline_menu"
             android:footerDividersEnabled="false"

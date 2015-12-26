@@ -63,15 +63,15 @@ public class ToggleFragment extends BaseFragment{
                 switch (checkedId) {
                     case R.id.toggle_menu_rb:
                         toggle_menu_rb.setTextColor(getResources().getColor(R.color.white));
-                        toggle_menu_rb.setBackgroundResource(R.drawable.btn_special_bg);
-                        toggle_vice_rb.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
+                        toggle_menu_rb.setBackgroundResource(R.drawable.rb_special_bg);
+                        toggle_vice_rb.setTextColor(getResources().getColor(R.color.toggle_rb_uncheck));
                         toggle_vice_rb.setBackground(null);
                         showFragment(0);
                         break;
                     case R.id.toggle_vice_rb:
                         toggle_vice_rb.setTextColor(getResources().getColor(R.color.white));
-                        toggle_vice_rb.setBackgroundResource(R.drawable.btn_special_bg);
-                        toggle_menu_rb.setTextColor(getResources().getColor(R.color.tab_colo_uncheck));
+                        toggle_vice_rb.setBackgroundResource(R.drawable.rb_special_bg);
+                        toggle_menu_rb.setTextColor(getResources().getColor(R.color.toggle_rb_uncheck));
                         toggle_menu_rb.setBackground(null);
                         showFragment(1);
                         break;

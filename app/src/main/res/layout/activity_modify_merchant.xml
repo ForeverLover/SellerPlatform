@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:fillViewport="true"
     android:scrollbars="none"
-    android:background="@drawable/page_bg"
+    android:background="@mipmap/page_bg2"
     android:layout_height="match_parent">
     <LinearLayout
-        android:paddingLeft="@dimen/dp_twenty"
-        android:paddingRight="@dimen/dp_twenty"
+        android:paddingLeft="@dimen/dp_fifteen"
+        android:paddingRight="@dimen/dp_seventeen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -18,7 +18,7 @@
             android:orientation="horizontal">
             <TextView
                 android:layout_weight="1"
-                android:textColor="@color/black"
+                android:textColor="#767575"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
@@ -34,12 +34,12 @@
                 android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="@dimen/dp_fifteen"
+            android:layout_marginTop="@dimen/dp_twenty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:textColor="@color/black"
+                android:textColor="#767575"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
@@ -56,19 +56,19 @@
                 android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="@dimen/dp_fifteen"
+            android:layout_marginTop="@dimen/dp_twenty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:textColor="@color/black"
+                android:textColor="#767575"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_id"/>
             <TextView
-                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:id="@+id/modify_merchant_id"
                 android:layout_weight="2"
                 android:textSize="@dimen/sp_sixteen"
@@ -76,19 +76,19 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="@dimen/dp_fifteen"
+            android:layout_marginTop="@dimen/dp_twenty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:textColor="@color/black"
+                android:textColor="#767575"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_addr"/>
             <EditText
-                android:textColor="@color/black_one"
+                android:textColor="#424243"
                 android:id="@+id/modify_merchant_addr"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -97,19 +97,19 @@
                 android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="@dimen/dp_fifteen"
+            android:layout_marginTop="@dimen/dp_twenty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:textColor="@color/black"
+                android:textColor="#767575"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_link"/>
             <EditText
-                android:textColor="@color/black_one"
+                android:textColor="#424243"
                 android:id="@+id/modify_merchant_link"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -118,19 +118,19 @@
                 android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="@dimen/dp_fifteen"
+            android:layout_marginTop="@dimen/dp_twenty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:textColor="@color/black"
+                android:textColor="#767575"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_onTime"/>
             <EditText
-                android:textColor="@color/black_one"
+                android:textColor="#424243"
                 android:id="@+id/modify_merchant_showTime"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -139,19 +139,19 @@
                 android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="@dimen/dp_fifteen"
+            android:layout_marginTop="@dimen/dp_twenty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:textColor="@color/black"
+                android:textColor="#767575"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_web"/>
             <EditText
-                android:textColor="@color/black_one"
+                android:textColor="#424243"
                 android:id="@+id/modify_merchant_web"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -160,19 +160,19 @@
                 android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="@dimen/dp_fifteen"
+            android:layout_marginTop="@dimen/dp_twenty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:textColor="@color/black"
+                android:textColor="#767575"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_card"/>
             <EditText
-                android:textColor="@color/black_one"
+                android:textColor="#424243"
                 android:id="@+id/modify_merchant_card"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -181,19 +181,19 @@
                 android:background="@color/et_bg"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="@dimen/dp_fifteen"
+            android:layout_marginTop="@dimen/dp_twenty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:textColor="@color/black"
+                android:textColor="#767575"
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
                 android:text="@string/settings_remark"/>
             <EditText
-                android:textColor="@color/black_one"
+                android:textColor="#424243"
                 android:id="@+id/modify_merchant_remark"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
@@ -205,15 +205,11 @@
         <TextView
             android:id="@+id/modify_merchant_save_btn"
             android:layout_marginTop="@dimen/dp_eighty"
-            android:paddingLeft="@dimen/dp_thirty"
-            android:paddingRight="@dimen/dp_thirty"
-            android:paddingTop="@dimen/dp_five"
-            android:paddingBottom="@dimen/dp_five"
-            android:textSize="@dimen/sp_sixteen"
+            android:textSize="@dimen/sp_eighteen"
             android:text="@string/settings_merchant_save"
             android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/dp_hundred_twenty_three"
+            android:layout_height="@dimen/dp_thirty_seven"
             android:gravity="center"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/btn_special_bg"/>

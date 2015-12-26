@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tab_id"
-    android:paddingTop="@dimen/dp_ten"
+    android:paddingTop="@dimen/dp_eight"
     android:paddingBottom="@dimen/dp_ten"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -25,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_forteen"
             android:textColor="@color/tab_text_selector" />
 
 

@@ -6,7 +6,7 @@
     <TextView
         android:padding="@dimen/dp_five"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/dp_ten"
+        android:layout_marginLeft="@dimen/dp_thirteen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/sp_eighteen"
