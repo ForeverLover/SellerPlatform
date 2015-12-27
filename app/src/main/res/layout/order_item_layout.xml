@@ -38,7 +38,7 @@
                 android:layout_toRightOf="@+id/order_item_orderNo"
                 android:text="李先生 -30分鐘前"
                 android:textColor="#383839"
-                android:textSize="@dimen/sp_fifteen" />
+                android:textSize="@dimen/sp_forteen" />
 
             <TextView
                 android:id="@+id/order_item_type"
@@ -63,14 +63,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/order_addr"
-                android:textColor="#383839"
+                android:textColor="#3a3b3b"
                 android:textSize="@dimen/sp_fifteen" />
 
             <TextView
                 android:id="@+id/order_addr_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#383839"
+                android:textColor="#3a3b3b"
                 android:textSize="@dimen/sp_fifteen" />
 
         </LinearLayout>
@@ -87,14 +87,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/order_remark"
-                android:textColor="@color/black_one"
+                android:textColor="#3a3b3b"
                 android:textSize="@dimen/sp_sixteen" />
 
             <TextView
                 android:id="@+id/order_remark_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black_one"
+                android:textColor="#3a3b3b"
                 android:textSize="@dimen/sp_sixteen" />
 
         </LinearLayout>
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/dp_five"
             android:paddingBottom="@dimen/dp_five"
-            android:layout_marginLeft="@dimen/dp_eight"
+            android:layout_marginLeft="@dimen/dp_seven"
             android:layout_marginRight="@dimen/dp_eight"
             android:divider="@null"
              android:background="@drawable/order_item_pro_bg"

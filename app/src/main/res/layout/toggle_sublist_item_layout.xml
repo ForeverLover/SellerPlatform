@@ -25,5 +25,5 @@
         android:id="@+id/toggle_sublist_item_cb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/CustomCheckboxSmallTheme"/>
+        style="@style/CustomCheckboxTheme"/>
 </RelativeLayout>

@@ -50,7 +50,7 @@ public class ToggleFragment extends BaseFragment{
         toggle_layout.check(R.id.toggle_menu_rb);
         showFragment(0);
         toggle_menu_rb.setTextColor(getResources().getColor(R.color.white));
-        toggle_menu_rb.setBackgroundResource(R.drawable.btn_special_bg);
+        toggle_menu_rb.setBackgroundResource(R.drawable.rb_special_bg);
     }
 
     @Override

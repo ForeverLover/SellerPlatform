@@ -21,7 +21,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_one"
-        android:background="@color/split_line_color_two" />
+        android:background="@color/et_bg" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/toggle_veiewpager"

@@ -5,7 +5,7 @@
     android:paddingBottom="@dimen/dp_ten"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/half_white">
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -21,11 +21,12 @@
             android:scaleType="center" />
 
         <TextView
+
             android:id="@+id/tab_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/sp_forteen"
+            android:textSize="@dimen/sp_twelve"
             android:textColor="@color/tab_text_selector" />
 
 

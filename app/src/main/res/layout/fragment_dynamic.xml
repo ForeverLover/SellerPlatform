@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/half_white">
+        android:background="@color/white">
 
         <CheckBox
             android:id="@+id/dynamic_cb"

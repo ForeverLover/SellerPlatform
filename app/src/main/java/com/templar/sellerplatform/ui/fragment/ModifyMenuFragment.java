@@ -81,7 +81,7 @@ public class ModifyMenuFragment extends BaseFragment implements ViewPager.OnPage
             rb.setText(channelList.get(i).getName());
             RadioGroup.LayoutParams params = new
                     RadioGroup.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT,
-                    RadioGroup.LayoutParams.WRAP_CONTENT);
+                    RadioGroup.LayoutParams.MATCH_PARENT);
 
             modify_radio_layout.addView(rb, params);
         }

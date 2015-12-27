@@ -19,6 +19,7 @@
             android:orientation="horizontal">
 
             <RadioButton
+                android:textColor="@color/toggle_rb_uncheck"
                 android:id="@+id/modify_menu_rb"
                 android:layout_width="@dimen/dp_ninety_seven"
                 android:layout_height="@dimen/dp_thirty_two"
@@ -28,6 +29,7 @@
                 android:textSize="@dimen/sp_sixteen" />
 
             <RadioButton
+                android:textColor="@color/toggle_rb_uncheck"
                 android:id="@+id/modify_vice_rb"
                 android:layout_width="@dimen/dp_ninety_seven"
                 android:layout_height="@dimen/dp_thirty_two"

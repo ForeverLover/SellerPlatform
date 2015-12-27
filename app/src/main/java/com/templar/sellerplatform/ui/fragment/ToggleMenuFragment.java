@@ -65,6 +65,7 @@ public class ToggleMenuFragment extends BaseFragment implements ViewPager.OnPage
                 RadioButton rb = (RadioButton) inflater.
                         inflate(R.layout.tab_rb, null);
                 rb.setId(i);
+//                rb.setTextSize(DensityUtil.sp2px(getActivity(), 16));
                 rb.setText(menuTabList.get(i).getName());
 
                 RadioGroup.LayoutParams params = new

@@ -7,5 +7,5 @@
     <!-- 填充颜色 -->
     <solid android:color="@color/four_white"></solid>
     <!-- 矩形的圆角半径 -->
-    <corners android:radius="10dp" />
+    <corners android:radius="5dp" />
 </shape>

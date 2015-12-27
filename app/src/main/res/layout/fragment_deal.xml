@@ -5,6 +5,7 @@
     android:paddingLeft="@dimen/dp_fifteen"
     android:paddingRight="@dimen/dp_fifteen"
     android:paddingTop="@dimen/dp_five"
+    android:background="@mipmap/page_bg2"
     android:layout_height="match_parent">
 
     <com.templar.sellerplatform.widget.morerecyclerview.MoreRecyclerView
