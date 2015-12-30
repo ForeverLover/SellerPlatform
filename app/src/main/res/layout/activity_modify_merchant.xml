@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:fillViewport="true"
     android:scrollbars="none"
-    android:background="@mipmap/page_bg2"
+    android:background="@mipmap/page_bg"
     android:layout_height="match_parent">
     <LinearLayout
         android:paddingLeft="@dimen/dp_fifteen"
@@ -21,17 +21,18 @@
                 android:textColor="#767575"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:text="@string/settings_merchant_name"/>
             <EditText
+                android:textCursorDrawable="@null"
                 android:textColorHint="@color/black_one"
                 android:textColor="@color/black"
                 android:id="@+id/modify_merchant_name"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:layout_height="wrap_content"
-                android:background="@color/et_bg"/>
+                android:background="@color/merchant_bg_color"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_twenty"
@@ -43,17 +44,18 @@
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:text="@string/settings_merchant_name_vice"/>
             <EditText
+                android:textCursorDrawable="@null"
                 android:textColorHint="@color/black_one"
                 android:textColor="@color/black"
                 android:id="@+id/modify_merchant_vicename"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
-                android:background="@color/et_bg"/>
+                android:textSize="@dimen/sp_forteen"
+                android:background="@color/merchant_bg_color"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_twenty"
@@ -65,13 +67,13 @@
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:text="@string/settings_id"/>
             <TextView
                 android:textColor="@color/black"
                 android:id="@+id/modify_merchant_id"
                 android:layout_weight="2"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -85,16 +87,18 @@
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:text="@string/settings_addr"/>
             <EditText
+                android:maxLines="2"
+                android:textCursorDrawable="@null"
                 android:textColor="#424243"
                 android:id="@+id/modify_merchant_addr"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
-                android:background="@color/et_bg"/>
+                android:textSize="@dimen/sp_forteen"
+                android:background="@color/merchant_bg_color"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_twenty"
@@ -106,16 +110,17 @@
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:text="@string/settings_link"/>
             <EditText
+                android:textCursorDrawable="@null"
                 android:textColor="#424243"
                 android:id="@+id/modify_merchant_link"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
-                android:background="@color/et_bg"/>
+                android:textSize="@dimen/sp_forteen"
+                android:background="@color/merchant_bg_color"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_twenty"
@@ -127,16 +132,17 @@
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:text="@string/settings_onTime"/>
             <EditText
+                android:textCursorDrawable="@null"
                 android:textColor="#424243"
                 android:id="@+id/modify_merchant_showTime"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
-                android:background="@color/et_bg"/>
+                android:textSize="@dimen/sp_forteen"
+                android:background="@color/merchant_bg_color"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_twenty"
@@ -148,16 +154,17 @@
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:text="@string/settings_web"/>
             <EditText
+                android:textCursorDrawable="@null"
                 android:textColor="#424243"
                 android:id="@+id/modify_merchant_web"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
-                android:background="@color/et_bg"/>
+                android:textSize="@dimen/sp_forteen"
+                android:background="@color/merchant_bg_color"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_twenty"
@@ -169,16 +176,18 @@
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:text="@string/settings_card"/>
             <EditText
+                android:textCursorDrawable="@null"
                 android:textColor="#424243"
                 android:id="@+id/modify_merchant_card"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
-                android:background="@color/et_bg"/>
+                android:maxLines="2"
+                android:textSize="@dimen/sp_forteen"
+                android:background="@color/merchant_bg_color"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="@dimen/dp_twenty"
@@ -190,16 +199,18 @@
                 android:layout_weight="1"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
+                android:textSize="@dimen/sp_forteen"
                 android:text="@string/settings_remark"/>
             <EditText
+                android:textCursorDrawable="@null"
                 android:textColor="#424243"
                 android:id="@+id/modify_merchant_remark"
                 android:layout_weight="2"
                 android:layout_width="@dimen/dp_zero"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_sixteen"
-                android:background="@color/et_bg"/>
+                android:textSize="@dimen/sp_forteen"
+                android:maxLines="2"
+                android:background="@color/merchant_bg_color"/>
         </LinearLayout>
 
         <TextView
@@ -211,6 +222,7 @@
             android:layout_width="@dimen/dp_hundred_twenty_three"
             android:layout_height="@dimen/dp_thirty_seven"
             android:gravity="center"
+            android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/btn_special_bg"/>
 

@@ -5,7 +5,8 @@
     android:paddingLeft="@dimen/dp_ten"
     android:paddingRight="@dimen/dp_eleven"
     android:paddingBottom="@dimen/dp_ten"
-    android:paddingTop="@dimen/dp_ten">
+    android:paddingTop="@dimen/dp_ten"
+    android:background="@drawable/menu_item_main_bg">
 
 
     <ImageView
@@ -19,8 +20,8 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:id="@+id/modify_upate_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dp_twenty_five"
+        android:layout_height="@dimen/dp_twenty_five"
         android:src="@mipmap/modify_category_img" />
     <TextView
         android:layout_marginLeft="@dimen/dp_nine"
@@ -29,6 +30,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/sp_sixteen"
         android:layout_marginRight="@dimen/dp_five"
+        android:textColor="#333333"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/modify_upate_img"
         android:layout_toRightOf="@+id/modify_delete_img"/>

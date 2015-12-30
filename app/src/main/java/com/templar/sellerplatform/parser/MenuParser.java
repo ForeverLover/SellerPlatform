@@ -63,6 +63,14 @@ public class MenuParser {
         subMenu.setOn(true);
         subMenuList.add(subMenu);
         subMenu = new SubMenu();
+        subMenu.setName("珍珠蛋餅");
+        subMenu.setOn(true);
+        subMenuList.add(subMenu);
+        subMenu = new SubMenu();
+        subMenu.setName("法式小麵包");
+        subMenu.setOn(true);
+        subMenuList.add(subMenu);
+        subMenu = new SubMenu();
         subMenu.setName("紅茶拿鐵");
         subMenuList.add(subMenu);
         menuTab.setSubMenuList(subMenuList);

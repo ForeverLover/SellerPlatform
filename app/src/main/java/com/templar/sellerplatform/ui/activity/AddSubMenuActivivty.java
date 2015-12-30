@@ -76,10 +76,11 @@ public class AddSubMenuActivivty extends BaseActivity {
         if (subMenu != null) {
             menu_single_title.setText(subMenu.getName());
             menuSingleItemList = subMenu.getMenuItemList();
-            if (menuSingleItemList != null) {
-                menuItemAdapter = new MenuItemAdapter(menuSingleItemList, AddSubMenuActivivty.this, 1);
-                menu_single_lv.setAdapter(menuItemAdapter);
-            }
+            if (menuSingleItemList == null)
+                menuSingleItemList = new ArrayList<>();
+            menuSingleItemList.add(new MenuItem());
+            menuItemAdapter = new MenuItemAdapter(menuSingleItemList, AddSubMenuActivivty.this, 1);
+            menu_single_lv.setAdapter(menuItemAdapter);
             setViceData(subMenu);
         } else {
             subMenu = new SubMenu();
@@ -148,7 +149,7 @@ public class AddSubMenuActivivty extends BaseActivity {
                 intent.putExtra(Constants.Intent.Variable.MENU_SINGLE_ID, subMenu.getId());
                 setResult(RESULT_OK, intent);
                 MLog.v("Tag", "necessary:" + (subMenu.getNecessaryViceList() == null ? 0 : subMenu.getNecessaryViceList().size()));
-                MLog.v("Tag","unecessary:"+(subMenu.getUnnecessaryViceList()==null?0:subMenu.getUnnecessaryViceList().size()));
+                MLog.v("Tag", "unecessary:" + (subMenu.getUnnecessaryViceList() == null ? 0 : subMenu.getUnnecessaryViceList().size()));
                 finish();
                 break;
             case R.id.menu_single_cancel_btn:

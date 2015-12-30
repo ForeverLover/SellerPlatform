@@ -1,12 +1,15 @@
 package com.templar.sellerplatform.utils;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.SpannedString;
 import android.text.TextUtils;
 import android.text.style.AbsoluteSizeSpan;
+import android.widget.TextView;
 
 import com.templar.sellerplatform.R;
 
@@ -96,7 +99,7 @@ public class StringUtils {
     }
 
     public static String getTweenTime(String timeStr, Context mContext) {
-        MLog.v("Tag","tweenTime:"+timeStr);
+        MLog.v("Tag", "tweenTime:" + timeStr);
         SimpleDateFormat target = new SimpleDateFormat("yyyy-MM-dd hh:mm");
         Date date = null;
         try {
@@ -110,7 +113,7 @@ public class StringUtils {
             long day = hour / 24;
           /*  long month=tween/1000;
             long year=tween/12;*/
-            MLog.v("Tag",day+" "+" "+hour+" "+minute+" "+second);
+            MLog.v("Tag", day + " " + " " + hour + " " + minute + " " + second);
             if (day > 1) {
                 return day + mContext.getString(R.string.order_day);
             }
@@ -130,5 +133,17 @@ public class StringUtils {
         }
 
         return "";
+    }
+
+    private static Typeface getTextViewTypeFace(Context context) {
+        AssetManager mgr = context.getAssets();//得到AssetManager
+        Typeface tf = Typeface.createFromAsset(mgr, "fonts/m_black.ttf");//根据路径得到Typeface
+
+        return tf;
+    }
+
+    public static void setText(TextView tv, String text, Context mContext) {
+        tv.setText(text);
+        tv.setTypeface(getTextViewTypeFace(mContext));
     }
 }

@@ -13,7 +13,7 @@
         android:width="1dp"
         android:color="@color/tab_colo_checked"></stroke>
     <!-- 填充颜色 -->
-    <solid android:color="#FFFFFF"></solid>
+    <solid android:color="#00FFFFFF"></solid>
     <!-- 矩形的圆角半径 -->
     <corners android:radius="3dp" />
 

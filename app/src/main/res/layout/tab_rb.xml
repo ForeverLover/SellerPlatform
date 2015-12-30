@@ -3,7 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="30dp"
     android:background="@drawable/tab_menu_selector"
-    android:textColor="@color/rb_text_selector"
+    android:textColor="@color/mt_rb_text_selector"
     android:button="@null"
     android:paddingBottom="10dp"
     android:textSize="@dimen/sp_sixteen"

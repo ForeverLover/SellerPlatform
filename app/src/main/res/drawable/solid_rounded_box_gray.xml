@@ -8,9 +8,9 @@
         <!--android:dashGap="3dp"-->
         <!--android:dashWidth="6dp" />-->
     <!-- 线的宽度，颜色灰色 -->
-    <stroke android:width="1dp" android:color="#e2e2e2"></stroke>
+    <stroke android:width="1dp" android:color="#cccccc"></stroke>
     <!-- 填充颜色 -->
-    <solid android:color="@color/half_white"></solid>
+    <solid android:color="#00ffffff"></solid>
     <!-- 矩形的圆角半径 -->
     <corners android:radius="5dp" />
 

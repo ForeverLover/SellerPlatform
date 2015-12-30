@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/page_bg2">
+    android:background="@mipmap/page_bg">
     <ScrollView
         android:layout_above="@+id/menuitem_vice_finishBtn"
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
                 android:layout_marginTop="@dimen/dp_forty_seven"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_twenty"
+                android:textSize="@dimen/sp_twenty_six"
                 android:text="@string/single_vice_config_title"
                 android:textColor="#3b3c3d"
                 android:gravity="center"/>

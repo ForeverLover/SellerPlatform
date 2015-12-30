@@ -82,15 +82,10 @@ public class AddViceAcitivity extends BaseActivity implements RadioGroup.OnCheck
         super.initView();
         if (subMenu != null) {
             viceAdd_vice_title.setText(subMenu.getName());
-            if (viceItemList != null) {
-                vice_num_tv.setText(String.valueOf(viceItemList.size()));
-                viceItemAdapter = new MenuItemAdapter(viceItemList, AddViceAcitivity.this, 2);
-                viceAdd_item_lv.setAdapter(viceItemAdapter);
-                SystemUtils.setListViewHeight(viceAdd_item_lv);
-            }
-        } else {
-            subMenu = new SubMenu();
-            subMenu.setId(System.currentTimeMillis() + "");
+            vice_num_tv.setText(String.valueOf(viceItemList.size()));
+            viceItemAdapter = new MenuItemAdapter(viceItemList, AddViceAcitivity.this, 2);
+            viceAdd_item_lv.setAdapter(viceItemAdapter);
+            SystemUtils.setListViewHeight(viceAdd_item_lv);
         }
         if (1 == type) {
             viceAdd_choice_rg.check(R.id.viewAdd_choice_unecessary_rb);
@@ -111,8 +106,16 @@ public class AddViceAcitivity extends BaseActivity implements RadioGroup.OnCheck
             selectionType = subMenu.getSelectionType();
             selectioncount = subMenu.getSelectCount();
             viceItemList = subMenu.getMenuItemList();
+        } else {
+            subMenu = new SubMenu();
+            subMenu.setId(System.currentTimeMillis() + "");
         }
         itemNum = viceItemList != null ? viceItemList.size() : 0;
+        if (itemNum == 0) {
+            viceItemList = new ArrayList<>();
+            viceItemList.add(new MenuItem());
+
+        }
         setChoiceList();
         setItemAmountList();
 
@@ -229,12 +232,13 @@ public class AddViceAcitivity extends BaseActivity implements RadioGroup.OnCheck
         if (choiceList == null) {
             choiceList = new ArrayList<>();
             choiceList.add(getString(R.string.vice_more));
+            choiceList.add(getString(R.string.vice_one));
         }
         if (1 == type) {
             if (choiceList.contains(getString(R.string.vice_less)))
                 choiceList.remove(getString(R.string.vice_less));
         } else
-            choiceList.add(getString(R.string.vice_less));
+            choiceList.add(1,getString(R.string.vice_less));
 
     }
 

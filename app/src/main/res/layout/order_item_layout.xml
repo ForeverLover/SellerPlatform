@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="S013"
-                android:textColor="@color/tab_colo_checked"
+                android:textColor="#00BEFF"
                 android:textSize="@dimen/sp_twenty_five" />
 
             <TextView
@@ -37,8 +37,8 @@
                 android:layout_toLeftOf="@+id/order_item_type"
                 android:layout_toRightOf="@+id/order_item_orderNo"
                 android:text="李先生 -30分鐘前"
-                android:textColor="#383839"
-                android:textSize="@dimen/sp_forteen" />
+                android:textColor="#4d4d4d"
+                android:textSize="@dimen/sp_thirteen" />
 
             <TextView
                 android:id="@+id/order_item_type"
@@ -47,7 +47,7 @@
                 android:layout_alignBaseline="@+id/order_item_orderNo"
                 android:layout_alignParentRight="true"
                 android:text="外帶"
-                android:textColor="@color/black_three"
+                android:textColor="#4d4d4d"
                 android:textSize="@dimen/sp_twenty_two" />
         </RelativeLayout>
 
@@ -63,14 +63,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/order_addr"
-                android:textColor="#3a3b3b"
+                android:textColor="#4d4d4d"
                 android:textSize="@dimen/sp_fifteen" />
 
             <TextView
                 android:id="@+id/order_addr_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#3a3b3b"
+                android:textColor="#4d4d4d"
                 android:textSize="@dimen/sp_fifteen" />
 
         </LinearLayout>
@@ -87,14 +87,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/order_remark"
-                android:textColor="#3a3b3b"
+                android:textColor="#4d4d4d"
                 android:textSize="@dimen/sp_sixteen" />
 
             <TextView
                 android:id="@+id/order_remark_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#3a3b3b"
+                android:textColor="#4d4d4d"
                 android:textSize="@dimen/sp_sixteen" />
 
         </LinearLayout>
@@ -126,14 +126,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/order_total"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_nineteen" />
+                android:textSize="@dimen/sp_sixteen" />
 
             <TextView
                 android:id="@+id/order_item_totalPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_nineteen" />
+                android:textSize="@dimen/sp_sixteen" />
         </LinearLayout>
 
         <RelativeLayout
@@ -155,9 +155,10 @@
                     android:layout_height="@dimen/dp_twenty_five"
                     android:background="@drawable/solid_rounded_box_blue"
                     android:gravity="center"
-                    android:textSize="@dimen/sp_sixteen"
-                    android:textColor="@color/tab_colo_checked"
-                    android:visibility="gone" />
+                    android:textSize="@dimen/sp_fifteen"
+                    android:textStyle="bold"
+                    android:textColor="@color/dynamic_color_checked"
+                     android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/order_item_specialOp"
@@ -166,8 +167,9 @@
                     android:layout_marginLeft="@dimen/dp_ten"
                     android:background="@drawable/btn_special_bg"
                     android:gravity="center"
+                    android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/sp_sixteen"
+                    android:textSize="@dimen/sp_fifteen"
                     android:visibility="gone" />
             </LinearLayout>
 

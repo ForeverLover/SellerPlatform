@@ -1,6 +1,8 @@
 package com.templar.sellerplatform.ui.activity;
 
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -28,6 +30,22 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        DisplayMetrics dm = new DisplayMetrics();
+        dm = getResources().getDisplayMetrics();
+
+        float density  = dm.density;        // 屏幕密度（像素比例：0.75/1.0/1.5/2.0）  
+        int densityDPI = dm.densityDpi;     // 屏幕密度（每寸像素：120/160/240/320）  
+        float xdpi = dm.xdpi;
+        float ydpi = dm.ydpi;
+
+        Log.e("Tag" + "  DisplayMetrics", "xdpi=" + xdpi + "; ydpi=" + ydpi);
+        Log.e("Tag" + "  DisplayMetrics", "density=" + density + "; densityDPI=" + densityDPI);
+
+       int  screenWidth  = dm.widthPixels;      // 屏幕宽（像素，如：480px）
+        int screenHeight = dm.heightPixels;     // 屏幕高（像素，如：800px）
+
+        Log.e("Tag","screenWidth=" + screenWidth + "; screenHeight=" + screenHeight);
+
     }
 
     @OnClick(R.id.login_submit_btn)

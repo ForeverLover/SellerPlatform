@@ -28,7 +28,7 @@ public class CornerImageView extends ImageView {
     }
 
     private final RectF roundRect = new RectF();
-    private float rect_adius = 10;
+    private float rect_adius = 3;
     private final Paint maskPaint = new Paint();
     private final Paint zonePaint = new Paint();
 

@@ -63,7 +63,6 @@ public class SettingsFragment extends BaseFragment implements MyTabActivityResul
     private TextView settings_remark_tv;
     @ViewInject(R.id.settings_card_tv)
     private TextView settings_card_tv;
-
     private DisplayMetrics displayMetrics;
     private WindowManager windowManager;
 
@@ -90,7 +89,7 @@ public class SettingsFragment extends BaseFragment implements MyTabActivityResul
         windowManager.getDefaultDisplay().getMetrics(displayMetrics);
 
         rlParams = new RelativeLayout.LayoutParams(displayMetrics.widthPixels, displayMetrics.widthPixels * 9 / 16);
-        llParams = new LinearLayout.LayoutParams(displayMetrics.widthPixels, displayMetrics.widthPixels * 9 / 16 + DensityUtil.dip2px(getActivity(), 50));
+        llParams = new LinearLayout.LayoutParams(displayMetrics.widthPixels, displayMetrics.widthPixels * 9 / 16 + DensityUtil.dip2px(getActivity(), 42));
 
         information = MerchantParser.getInstance().parseMerchantInfo();
         setData();
@@ -100,7 +99,7 @@ public class SettingsFragment extends BaseFragment implements MyTabActivityResul
     public void setData() {
         if (information != null) {
             MImageLoader.getInstance(getActivity()).displayImage(information.getMerchant_bg(), merchant_img_iv);
-            merchant_name_tv.setText(StringUtils.getMerchantNameStr(information.getMerchant_name() + " -" + information.getMerchant_name_vice(), information.getMerchant_name().length(), getActivity(), 20, 14));
+            merchant_name_tv.setText(StringUtils.getMerchantNameStr(information.getMerchant_name() + " -" + information.getMerchant_name_vice(), information.getMerchant_name().length(), getActivity(), 24, 14));
             settings_id_tv.setText(information.getMerchant_id());
             settings_addr_tv.setText(information.getMerchant_addr());
             settings_link_tv.setText(information.getMerchant_link());
@@ -119,15 +118,16 @@ public class SettingsFragment extends BaseFragment implements MyTabActivityResul
         merchant_title_layout.setLayoutParams(llParams);
     }
 
-    @OnClick({R.id.settings_modify_layout, R.id.merchant_logo_iv})
+    @OnClick({R.id.settings_modify_layout, R.id.merchant_logo_iv,R.id.settings_account_opLaout})
     private void operate(View v) {
         switch (v.getId()) {
             case R.id.settings_modify_layout:
                 getActivity().startActivityForResult(new Intent(getActivity(), ModifyMerchantInformationActivity.class).putExtra(Constants.Intent.Variable.MERCHANT_INFO, information), Constants.Code.MODIFY_MERCHANT);
                 break;
-            case R.id.merchant_logo_iv:
+            case R.id.settings_account_opLaout:
                 getActivity().startActivity(new Intent(getActivity(), ModifyUserInformationActivity.class));
                 break;
+
         }
     }
 

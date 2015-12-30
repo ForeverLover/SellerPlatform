@@ -16,20 +16,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:scrollbars="none"
-    >
+    android:paddingLeft="@dimen/dp_ten"
+    android:paddingRight="@dimen/dp_eight"
+    android:scrollbars="none">
 
-    <com.templar.sellerplatform.widget.CustomListView
-        android:id="@+id/toggle_submenu_lv"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_ten"
-        android:layout_marginRight="@dimen/dp_eight"
-        android:layout_marginTop="@dimen/dp_six"
-        android:listSelector="@android:color/transparent"
-        android:divider="@drawable/shape_divideline_menu"
-        android:footerDividersEnabled="false"
-      android:background="@color/half_white" >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    </com.templar.sellerplatform.widget.CustomListView>
+        <com.templar.sellerplatform.widget.CustomListView
+            android:id="@+id/toggle_submenu_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_six"
+            android:background="@drawable/menu_item_main_bg"
+            android:divider="@drawable/shape_divideline_menu"
+            android:footerDividersEnabled="false"
+            android:listSelector="@android:color/transparent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sixty_five" />
+    </LinearLayout>
+
+
 </ScrollView>

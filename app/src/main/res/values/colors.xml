@@ -9,7 +9,7 @@
     <color name="black_one">#686868</color>
     <color name="black_two">#898989</color>
     <color name="black_three">#222222</color>
-    <color name="half_white">#80ffffff</color>
+    <color name="tab_bg_color">#efffffff</color>
     <color name="four_white">#40ffffff</color>
     <color name="five_white">#50ffffff</color>
 
@@ -18,12 +18,15 @@
 
     <color name="page_color_checked">#01beff</color>
     <color name="page_color_uncheck">#4d4d4d</color>
+    <color name="page_color_checked1">#00aafe</color>
+    <color name="page_color_uncheck1">#a0a0a0</color>
+    <color name="page_color_uncheck2">#b3b3b3</color>
 
     <color name="et_hint_color">#666666</color>
     <color name="et_bg">#ececea</color>
     <color name="et_bg_2">#e4e4d9</color>
     <color name="light_gray">#999999</color>
-    <color name="toggle_rb_uncheck">#c8c8c8</color>
+    <color name="toggle_rb_uncheck">#cccccc</color>
     <color name="toggle_rb_checked">#01beff</color>
 
 
@@ -42,4 +45,9 @@
     <color name="merchant_label">#5c5d5d</color>
     <color name="merchant_text">#878787</color>
 
+    <color name="merchant_bg_color">#80e9ebe8</color>
+
+    <!--动态-->
+<color name="dynamic_color_checked">#00beff</color>
+<color name="dynamic_color_uncheck">#666666</color>
 </resources>

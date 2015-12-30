@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/page_bg2"
+    android:background="@mipmap/page_bg"
     android:orientation="vertical"
     android:paddingLeft="@dimen/dp_twenty">
 
@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alter_pwd_title"
-        android:textSize="@dimen/sp_twenty_four"/>
+        android:textSize="@dimen/sp_twenty_six"/>
 
     <LinearLayout
         android:layout_marginTop="@dimen/dp_fifty_eight"
@@ -33,10 +33,9 @@
                 android:textSize="@dimen/sp_sixteen"/>
 
             <EditText
+                android:textCursorDrawable="@null"
                 android:layout_marginLeft="@dimen/dp_thirteen"
                 android:id="@+id/pwd_first_et"
-                android:paddingTop="@dimen/dp_five"
-                android:paddingBottom="@dimen/dp_five"
                 android:layout_width="@dimen/dp_hundred_fourty_three"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
@@ -59,10 +58,9 @@
                 android:textSize="@dimen/sp_sixteen"/>
 
             <EditText
+                android:textCursorDrawable="@null"
                 android:layout_marginLeft="@dimen/dp_thirteen"
                 android:id="@+id/pwd_second_et"
-                android:paddingTop="@dimen/dp_five"
-                android:paddingBottom="@dimen/dp_five"
                 android:layout_width="@dimen/dp_hundred_fourty_three"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_sixteen"
@@ -83,13 +81,13 @@
             android:layout_width="@dimen/dp_sixty_three"
             android:layout_height="@dimen/dp_thirty"
             android:text="@string/account_cancel"
-            android:textSize="@dimen/sp_sixteen"
+            android:textSize="@dimen/sp_forteen"
             android:gravity="center"
             android:background="@drawable/btn_comment_bg"/>
         <TextView
             android:id="@+id/pwd_ensure_btn"
             android:layout_marginLeft="@dimen/dp_five"
-            android:textSize="@dimen/sp_sixteen"
+            android:textSize="@dimen/sp_forteen"
             android:background="@drawable/btn_special_bg"
             android:layout_width="@dimen/dp_sixty_three"
             android:layout_height="@dimen/dp_thirty"

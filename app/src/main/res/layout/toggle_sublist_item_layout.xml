@@ -5,7 +5,8 @@
     android:paddingBottom="@dimen/dp_ten"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/dp_twenty"
-    android:paddingRight="@dimen/dp_forteen">
+    android:paddingRight="@dimen/dp_forteen"
+    android:background="@drawable/menu_item_main_bg">
 
     <TextView
         android:layout_centerVertical="true"

@@ -9,8 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:paddingLeft="@dimen/dp_nineteen"
+        android:paddingRight="@dimen/dp_nineteen"
         android:fillViewport="true"
-        android:scrollbars="none">
+        android:scrollbars="none"
+        >
         <RadioGroup
             android:id="@+id/modify_radio_layout"
             android:layout_width="wrap_content"

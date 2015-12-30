@@ -25,6 +25,7 @@
     <dimen name="dp_fifteen">15dp</dimen>
     <dimen name="dp_sixteen">16dp</dimen>
     <dimen name="dp_seventeen">17dp</dimen>
+    <dimen name="dp_eighteen">17dp</dimen>
     <dimen name="dp_nineteen">19dp</dimen>
     <dimen name="dp_twenty">20dp</dimen>
     <dimen name="dp_twenty_two">22dp</dimen>
@@ -34,6 +35,7 @@
     <dimen name="dp_twenty_eight">28dp</dimen>
     <dimen name="dp_thirty">30dp</dimen>
     <dimen name="dp_thirty_two">32dp</dimen>
+    <dimen name="dp_thirty_four">34dp</dimen>
     <dimen name="dp_thirty_six">36dp</dimen>
     <dimen name="dp_thirty_seven">37dp</dimen>
     <dimen name="dp_thirty_eight">38dp</dimen>
@@ -45,15 +47,18 @@
     <dimen name="dp_forty_seven">47dp</dimen>
     <dimen name="dp_fifty">50dp</dimen>
     <dimen name="dp_fifty_five">55dp</dimen>
+    <dimen name="dp_fifty_six">56dp</dimen>
     <dimen name="dp_fifty_eight">58dp</dimen>
     <dimen name="dp_sixty">60dp</dimen>
     <dimen name="dp_sixty_three">63dp</dimen>
+    <dimen name="dp_sixty_five">65dp</dimen>
     <dimen name="dp_seventy">70dp</dimen>
     <dimen name="dp_seventy_three">73dp</dimen>
     <dimen name="dp_seventy_seven">77dp</dimen>
     <dimen name="dp_seventy_nine">79dp</dimen>
     <dimen name="dp_eighty">80dp</dimen>
     <dimen name="dp_eighty_four">84dp</dimen>
+    <dimen name="dp_ninety">90dp</dimen>
     <dimen name="dp_ninety_seven">97dp</dimen>
     <dimen name="dp_hundred">100dp</dimen>
     <dimen name="dp_hundred_eighteen">118dp</dimen>
@@ -74,6 +79,8 @@
     <dimen name="sp_twenty_two">22sp</dimen>
     <dimen name="sp_twenty_four">24sp</dimen>
     <dimen name="sp_twenty_five">25sp</dimen>
+    <dimen name="sp_twenty_six">26sp</dimen>
+    <dimen name="sp_twenty_seven">27sp</dimen>
 
     <!-- 间距-->
     <dimen name="margin_s">6dp</dimen>

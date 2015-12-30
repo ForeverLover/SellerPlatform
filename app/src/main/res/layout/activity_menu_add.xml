@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/page_bg2">
+    android:background="@mipmap/page_bg">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,12 +27,12 @@
                 android:gravity="center_horizontal"
                 android:hint="@string/single_title_hint"
                 android:textColorHint="#8b8c8e"
-                android:textSize="@dimen/sp_twenty" />
+                android:textSize="@dimen/sp_twenty_six" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_sixty_three"
+                android:layout_marginTop="@dimen/dp_sixty"
                 android:orientation="vertical">
 
                 <TextView
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/single_item_label"
                     android:textColor="#c5c5c6"
-                    android:textSize="@dimen/sp_twenty" />
+                    android:textSize="@dimen/sp_twenty_four" />
 
                 <ListView
                     android:id="@+id/menu_single_lv"
@@ -69,10 +69,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="@dimen/dp_five"
+                        android:layout_marginTop="@dimen/dp_three"
                         android:text="@string/single_item_add"
                         android:textColor="#acacac"
-                        android:textSize="@dimen/sp_forteen" />
+                        android:textSize="@dimen/sp_twelve" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/single_vice_label"
                     android:textColor="#c6c6c6"
-                    android:textSize="@dimen/sp_twenty" />
+                    android:textSize="@dimen/sp_twenty_four" />
 
                 <LinearLayout
                     android:id="@+id/menu_vice_necessary_layout"
@@ -158,10 +158,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="@dimen/dp_five"
+                        android:layout_marginTop="@dimen/dp_three"
                         android:text="@string/single_vice_add"
                         android:textColor="#acacac"
-                        android:textSize="@dimen/sp_forteen" />
+                        android:textSize="@dimen/sp_twelve" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -183,28 +183,23 @@
         <TextView
             android:id="@+id/menu_single_cancel_btn"
             android:layout_width="@dimen/dp_seventy_seven"
-            android:layout_height="@dimen/dp_thirty_six"
+            android:layout_height="@dimen/dp_thirty_four"
             android:background="@drawable/btn_comment_bg"
-            android:paddingBottom="@dimen/dp_five"
-            android:paddingLeft="@dimen/dp_twenty"
-            android:paddingRight="@dimen/dp_twenty"
-            android:paddingTop="@dimen/dp_five"
             android:text="@string/account_cancel"
-            android:textSize="@dimen/sp_eighteen"
+            android:gravity="center"
+            android:textSize="@dimen/sp_seventeen"
             android:textColor="@color/tab_colo_checked" />
 
         <TextView
             android:id="@+id/menu_single_ensure_btn"
             android:layout_width="@dimen/dp_seventy_seven"
-            android:layout_height="@dimen/dp_thirty_six"
+            android:layout_height="@dimen/dp_thirty_four"
             android:layout_marginLeft="@dimen/dp_five"
             android:background="@drawable/btn_special_bg"
-            android:paddingBottom="@dimen/dp_five"
-            android:paddingLeft="@dimen/dp_twenty"
-            android:paddingRight="@dimen/dp_twenty"
-            android:paddingTop="@dimen/dp_five"
             android:text="@string/account_ensure"
-            android:textSize="@dimen/sp_eighteen"
+
+            android:gravity="center"
+            android:textSize="@dimen/sp_seventeen"
             android:textColor="@color/white" />
     </LinearLayout>
 </RelativeLayout>

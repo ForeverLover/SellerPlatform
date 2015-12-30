@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/sp_seventeen"
             android:layout_marginRight="@dimen/dp_five"
-            android:textColor="@color/black"
+            android:textColor="#231815"
             android:text="卡拉雞翅煲 不加洋蔥"/>
         <TextView
             android:layout_alignParentRight="true"
@@ -24,11 +24,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/sp_seventeen"
-            android:textColor="#140805"
+            android:textColor="#231815"
             android:text="X2"/>
     </RelativeLayout>
     <TextView
-        android:textColor="#383839"
+        android:textColor="#4d4d4d"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/sp_fifteen"

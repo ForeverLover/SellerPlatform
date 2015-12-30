@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+   >
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:paddingLeft="@dimen/dp_ten"
         android:paddingRight="@dimen/dp_eight"
-        android:scrollbars="none">
-
-        <com.templar.sellerplatform.widget.CustomListView
-            android:id="@+id/modify_submenu_lv"
+        android:scrollbars="none"
+        >
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_six"
-            android:listSelector="@android:color/transparent"
-            android:divider="@drawable/shape_divideline_menu"
-            android:footerDividersEnabled="false"
-            android:background="@drawable/half_whit_bg">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        </com.templar.sellerplatform.widget.CustomListView>
+            <com.templar.sellerplatform.widget.CustomListView
+                android:id="@+id/modify_submenu_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_six"
+                android:listSelector="@android:color/transparent"
+                android:divider="@drawable/shape_divideline_menu"
+                android:footerDividersEnabled="false"
+                android:background="@drawable/menu_item_main_bg">
+
+            </com.templar.sellerplatform.widget.CustomListView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_sixty_five" />
+        </LinearLayout>
+
+
     </ScrollView>
 
     <LinearLayout
@@ -29,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/dp_twenty"
+        android:layout_marginBottom="@dimen/dp_eighty"
         android:layout_alignParentBottom="true">
         <ImageView
             android:layout_gravity="center_horizontal"
@@ -41,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/sp_forteen"
-            android:textColor="#e2e2e2"
+            android:textColor="#acacac"
             android:text="@string/menu_single_add"/>
     </LinearLayout>
 </RelativeLayout>

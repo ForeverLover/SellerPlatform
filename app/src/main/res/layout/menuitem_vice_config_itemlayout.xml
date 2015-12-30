@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/dp_twelve"
-    android:paddingRight="@dimen/dp_thirty_six"
+    android:paddingRight="@dimen/dp_thirty"
     android:paddingTop="@dimen/dp_five"
     android:paddingBottom="@dimen/dp_five">
     <TextView
@@ -19,8 +19,8 @@
         android:id="@+id/menuitem_config_vice_op"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:layout_width="@dimen/dp_forty"
-        android:layout_height="@dimen/dp_forty"
+        android:layout_width="@dimen/dp_thirty"
+        android:layout_height="@dimen/dp_thirty"
         android:scaleType="fitXY"
         android:src="@mipmap/modify_unselect"/>
 

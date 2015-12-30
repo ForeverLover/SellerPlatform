@@ -13,8 +13,8 @@
     <string name="tab_settings">設定</string>
 
     <!--产品tab标签-->
-    <string name="tab_menu">MENU</string>
-    <string name="tab_vice">副選項</string>
+    <string name="tab_menu">主選單</string>
+    <string name="tab_vice">副選單</string>
     <!--动态-->
     <string name="dynamic_notice">通知</string>
     <string name="dynamic_deal">處理</string>
@@ -27,6 +27,7 @@
     <string name="login_submit">登入</string>
 
     <!--設定-->
+    <string name="settings_account_alter">賬戶設定</string>
     <string name="settings_alter">編輯</string>
     <string name="settings_id">ID</string>
     <string name="settings_addr">地址</string>
@@ -119,8 +120,25 @@
 
     <string name="vice_less">至少</string>
     <string name="vice_more">至多</string>
+    <string name="vice_one">指定</string>
     <string name="vice_item_null">请确保該選單至少包含一则選項</string>
     <string name="vice_item_more">當前設置的選擇數目大於實際數據數目，請核實</string>
+
+    <string-array name="sort_way">
+        <item>不限時手動</item>
+        <item>限時1小時</item>
+        <item>限時2小時</item>
+        <item>限時3小時</item>
+        <item>限時4小時</item>
+        <item>限時5小時</item>
+        <item>限時6小時</item>
+        <item>限時7小時</item>
+        <item>限時8小時</item>
+        <item>限時9小時</item>
+        <item>限時10小時</item>
+        <item>限時11小時</item>
+        <item>限時12小時</item>
+    </string-array>
 
 
 </resources>
