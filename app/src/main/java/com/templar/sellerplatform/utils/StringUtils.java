@@ -135,7 +135,7 @@ public class StringUtils {
         return "";
     }
 
-    private static Typeface getTextViewTypeFace(Context context) {
+   /* private static Typeface getTextViewTypeFace(Context context) {
         AssetManager mgr = context.getAssets();//得到AssetManager
         Typeface tf = Typeface.createFromAsset(mgr, "fonts/m_black.ttf");//根据路径得到Typeface
 
@@ -145,5 +145,5 @@ public class StringUtils {
     public static void setText(TextView tv, String text, Context mContext) {
         tv.setText(text);
         tv.setTypeface(getTextViewTypeFace(mContext));
-    }
+    }*/
 }

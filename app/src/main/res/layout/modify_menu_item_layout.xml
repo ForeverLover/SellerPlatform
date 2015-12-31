@@ -28,7 +28,7 @@
         android:id="@+id/modify_name_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/sp_sixteen"
+        android:textSize="@dimen/sp_seventeen"
         android:layout_marginRight="@dimen/dp_five"
         android:textColor="#333333"
         android:layout_centerVertical="true"
