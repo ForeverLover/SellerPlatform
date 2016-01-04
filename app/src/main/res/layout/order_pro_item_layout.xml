@@ -14,16 +14,17 @@
             android:id="@+id/order_item_product_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_seventeen"
+            android:textSize="@dimen/sp_eighteen"
             android:layout_marginRight="@dimen/dp_five"
             android:textColor="#231815"
+            android:textStyle="bold"
             android:text="卡拉雞翅煲 不加洋蔥"/>
         <TextView
             android:layout_alignParentRight="true"
             android:id="@+id/order_item_product_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_seventeen"
+            android:textSize="@dimen/sp_eighteen"
             android:textColor="#231815"
             android:text="X2"/>
     </RelativeLayout>
@@ -31,7 +32,7 @@
         android:textColor="#4d4d4d"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/sp_fifteen"
+        android:textSize="@dimen/sp_sixteen"
         android:layout_marginLeft="@dimen/dp_nineteen"
         android:layout_marginRight="@dimen/dp_nineteen"
         android:lineSpacingMultiplier="1.1"

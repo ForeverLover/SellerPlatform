@@ -216,7 +216,7 @@
         <TextView
             android:id="@+id/modify_merchant_save_btn"
             android:layout_marginTop="@dimen/dp_eighty"
-            android:textSize="@dimen/sp_eighteen"
+            android:textSize="@dimen/sp_sixteen"
             android:text="@string/settings_merchant_save"
             android:textColor="@color/white"
             android:layout_width="@dimen/dp_hundred_twenty_three"

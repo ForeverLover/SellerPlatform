@@ -76,16 +76,17 @@ public class AddSubMenuActivivty extends BaseActivity {
         if (subMenu != null) {
             menu_single_title.setText(subMenu.getName());
             menuSingleItemList = subMenu.getMenuItemList();
-            if (menuSingleItemList == null)
-                menuSingleItemList = new ArrayList<>();
-            menuSingleItemList.add(new MenuItem());
-            menuItemAdapter = new MenuItemAdapter(menuSingleItemList, AddSubMenuActivivty.this, 1);
-            menu_single_lv.setAdapter(menuItemAdapter);
             setViceData(subMenu);
         } else {
             subMenu = new SubMenu();
             subMenu.setId(System.currentTimeMillis() + "");
         }
+        if (menuSingleItemList == null)
+            menuSingleItemList = new ArrayList<>();
+        if (menuSingleItemList.isEmpty())
+            menuSingleItemList.add(new MenuItem());
+        menuItemAdapter = new MenuItemAdapter(menuSingleItemList, AddSubMenuActivivty.this, 1);
+        menu_single_lv.setAdapter(menuItemAdapter);
     }
 
     private void setViceData(SubMenu sMenu) {

@@ -50,4 +50,8 @@
     <!--动态-->
 <color name="dynamic_color_checked">#00beff</color>
 <color name="dynamic_color_uncheck">#666666</color>
+
+    <!--编辑、开关tab-->
+    <color name="color_tab_rb_checked">#b3b3b3</color>
+    <color name="color_tab_rb_uncheck">#00beff</color>
 </resources>

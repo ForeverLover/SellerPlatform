@@ -27,7 +27,7 @@
                   android:gravity="center"
                   android:text="@string/tab_menu"
                   android:textColor="@color/toggle_rb_uncheck"
-                  android:textSize="@dimen/sp_sixteen" />
+                  android:textSize="@dimen/sp_fifteen" />
 
               <RadioButton
 
@@ -38,7 +38,7 @@
                   android:gravity="center"
                   android:text="@string/tab_vice"
                   android:textColor="@color/toggle_rb_uncheck"
-                  android:textSize="@dimen/sp_sixteen" />
+                  android:textSize="@dimen/sp_fifteen" />
           </RadioGroup>
       </RelativeLayout>
 

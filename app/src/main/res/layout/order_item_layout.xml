@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="S013"
                 android:textColor="#00BEFF"
-                android:textSize="@dimen/sp_twenty_five" />
+                android:textSize="@dimen/sp_twenty_four" />
 
             <TextView
                 android:id="@+id/order_item_buyerTime"
@@ -38,7 +38,7 @@
                 android:layout_toRightOf="@+id/order_item_orderNo"
                 android:text="李先生 -30分鐘前"
                 android:textColor="#4d4d4d"
-                android:textSize="@dimen/sp_thirteen" />
+                android:textSize="@dimen/sp_twelve" />
 
             <TextView
                 android:id="@+id/order_item_type"
@@ -48,7 +48,7 @@
                 android:layout_alignParentRight="true"
                 android:text="外帶"
                 android:textColor="#4d4d4d"
-                android:textSize="@dimen/sp_twenty_two" />
+                android:textSize="@dimen/sp_twenty_four" />
         </RelativeLayout>
 
         <LinearLayout
@@ -64,14 +64,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/order_addr"
                 android:textColor="#4d4d4d"
-                android:textSize="@dimen/sp_fifteen" />
+                android:textSize="@dimen/sp_twelve" />
 
             <TextView
                 android:id="@+id/order_addr_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#4d4d4d"
-                android:textSize="@dimen/sp_fifteen" />
+                android:textSize="@dimen/sp_twelve" />
 
         </LinearLayout>
 
@@ -88,14 +88,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/order_remark"
                 android:textColor="#4d4d4d"
-                android:textSize="@dimen/sp_sixteen" />
+                android:textSize="@dimen/sp_twelve" />
 
             <TextView
                 android:id="@+id/order_remark_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#4d4d4d"
-                android:textSize="@dimen/sp_sixteen" />
+                android:textSize="@dimen/sp_twelve" />
 
         </LinearLayout>
 
@@ -155,7 +155,7 @@
                     android:layout_height="@dimen/dp_twenty_five"
                     android:background="@drawable/solid_rounded_box_blue"
                     android:gravity="center"
-                    android:textSize="@dimen/sp_fifteen"
+                    android:textSize="@dimen/btn_text_size"
                     android:textStyle="bold"
                     android:textColor="@color/dynamic_color_checked"
                      android:visibility="gone"/>
@@ -169,7 +169,7 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/sp_fifteen"
+                    android:textSize="@dimen/btn_text_size"
                     android:visibility="gone" />
             </LinearLayout>
 

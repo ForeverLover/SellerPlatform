@@ -6,7 +6,7 @@
     android:textColor="@color/mt_rb_text_selector"
     android:button="@null"
     android:paddingBottom="10dp"
-    android:textSize="@dimen/sp_sixteen"
+    android:textSize="@dimen/sp_eighteen"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:paddingTop="10dp"

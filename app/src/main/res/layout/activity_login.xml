@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:text="@string/login_submit"
             android:textColor="@color/white"
-            android:textSize="@dimen/sp_eighteen"
+            android:textSize="@dimen/sp_sixteen"
             android:background="@drawable/btn_special_bg"/>
     </LinearLayout>
 

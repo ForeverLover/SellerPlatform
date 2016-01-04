@@ -13,10 +13,10 @@
         android:id="@+id/toggle_sublist_item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#121213"
+        android:textColor="#333333"
         android:layout_marginRight="@dimen/dp_ten"
         android:layout_toLeftOf="@+id/toggle_sublist_item_cb"
-        android:textSize="@dimen/sp_seventeen" />
+        android:textSize="@dimen/sp_eighteen" />
 
     <CheckBox
         android:background="@android:color/transparent"
