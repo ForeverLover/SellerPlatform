@@ -10,16 +10,29 @@
 
     </FrameLayout>
     <!--android:background="#F6F6F6"-->
-    <com.templar.sellerplatform.widget.MyFragmentTabHost
+    <LinearLayout
         android:layout_alignParentBottom="true"
-        android:id="@+id/my_tabhost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/tab_bg_color">
+        android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@android:id/tabcontent"
-            android:layout_width="0dp"
-            android:layout_height="0dp" />
-    </com.templar.sellerplatform.widget.MyFragmentTabHost>
+        <com.templar.sellerplatform.widget.MyFragmentTabHost
+            android:id="@+id/my_tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/tab_bg_color">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_one"
+                android:background="#e9eaea" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+        </com.templar.sellerplatform.widget.MyFragmentTabHost>
+    </LinearLayout>
+
 </RelativeLayout>

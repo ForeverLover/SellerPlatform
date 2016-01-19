@@ -229,7 +229,7 @@
             android:paddingRight="@dimen/dp_twenty"
             android:paddingTop="@dimen/dp_five"
             android:text="@string/account_cancel"
-            android:textSize="@dimen/sp_eighteen"
+            android:textSize="@dimen/sp_sixteen"
             android:textColor="@color/tab_colo_checked" />
 
         <TextView
@@ -238,7 +238,7 @@
             android:layout_width="@dimen/dp_zero"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_five"
-            android:textSize="@dimen/sp_eighteen"
+            android:textSize="@dimen/sp_sixteen"
             android:background="@drawable/btn_special_bg"
             android:paddingBottom="@dimen/dp_five"
             android:paddingLeft="@dimen/dp_twenty"

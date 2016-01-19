@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:textColor="#333333"
         android:layout_marginRight="@dimen/dp_ten"
+        android:textStyle="bold"
         android:layout_toLeftOf="@+id/toggle_sublist_item_cb"
         android:textSize="@dimen/sp_eighteen" />
 

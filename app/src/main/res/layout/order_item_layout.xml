@@ -37,6 +37,7 @@
                 android:layout_toLeftOf="@+id/order_item_type"
                 android:layout_toRightOf="@+id/order_item_orderNo"
                 android:text="李先生 -30分鐘前"
+
                 android:textColor="#4d4d4d"
                 android:textSize="@dimen/sp_twelve" />
 
@@ -56,7 +57,6 @@
             android:layout_marginRight="@dimen/dp_nineteen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_five"
             android:orientation="horizontal">
 
             <TextView
@@ -98,43 +98,48 @@
                 android:textSize="@dimen/sp_twelve" />
 
         </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/dp_seven"
+    android:layout_marginRight="@dimen/dp_eight"
+    android:background="@drawable/order_item_pro_bg"
+    android:layout_height="wrap_content">
+    <com.templar.sellerplatform.widget.CustomListView
+        android:layout_marginTop="@dimen/dp_six"
+        android:id="@+id/order_product_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_two"
+        android:paddingBottom="@dimen/dp_five"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"></com.templar.sellerplatform.widget.CustomListView>
 
-        <com.templar.sellerplatform.widget.CustomListView
-            android:layout_marginTop="@dimen/dp_six"
-            android:id="@+id/order_product_lv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/dp_five"
-            android:paddingBottom="@dimen/dp_five"
-            android:layout_marginLeft="@dimen/dp_seven"
-            android:layout_marginRight="@dimen/dp_eight"
-            android:divider="@null"
-             android:background="@drawable/order_item_pro_bg"
-            android:listSelector="@android:color/transparent"
-            android:scrollbars="none"></com.templar.sellerplatform.widget.CustomListView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/dp_twenty_two"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal">
 
-        <LinearLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginRight="@dimen/dp_thirteen"
-            android:layout_marginTop="@dimen/dp_five"
-            android:orientation="horizontal">
+            android:text="@string/order_total"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_sixteen" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/order_total"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sp_sixteen" />
+        <TextView
+            android:id="@+id/order_item_totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_sixteen" />
+    </LinearLayout>
+</LinearLayout>
 
-            <TextView
-                android:id="@+id/order_item_totalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sp_sixteen" />
-        </LinearLayout>
 
         <RelativeLayout
             android:layout_marginRight="@dimen/dp_thirteen"
@@ -164,7 +169,7 @@
                     android:id="@+id/order_item_specialOp"
                     android:layout_width="@dimen/dp_eighty"
                     android:layout_height="@dimen/dp_twenty_five"
-                    android:layout_marginLeft="@dimen/dp_ten"
+                    android:layout_marginLeft="@dimen/dp_five"
                     android:background="@drawable/btn_special_bg"
                     android:gravity="center"
                     android:textStyle="bold"

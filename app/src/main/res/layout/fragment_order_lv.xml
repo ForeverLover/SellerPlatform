@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_scroll_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingLeft="@dimen/dp_ten"
+    android:paddingRight="@dimen/dp_eight"
+    android:scrollbars="none"
+    android:background="@mipmap/page_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_eighty" />
+        <com.templar.sellerplatform.widget.CustomListView
+            android:id="@+id/order_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_six"
+           android:dividerHeight="@dimen/dp_ten"
+            android:divider="#00ffffff"
+            android:footerDividersEnabled="false"
+            android:listSelector="@android:color/transparent">
+
+        </com.templar.sellerplatform.widget.CustomListView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_sixty_five" />
+    </LinearLayout>
+
+
+</ScrollView>

@@ -43,7 +43,7 @@ public class BaseActivity extends AppCompatActivity implements XRequestCallBack,
         super.setContentView(view);
     }
 
-    @Override
+       @Override
     public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
         ViewUtils.inject(this);

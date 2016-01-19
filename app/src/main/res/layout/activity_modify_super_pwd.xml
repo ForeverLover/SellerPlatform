@@ -81,13 +81,13 @@
             android:layout_width="@dimen/dp_sixty_three"
             android:layout_height="@dimen/dp_thirty"
             android:text="@string/account_cancel"
-            android:textSize="@dimen/sp_forteen"
+            android:textSize="@dimen/sp_sixteen"
             android:gravity="center"
             android:background="@drawable/btn_comment_bg"/>
         <TextView
             android:id="@+id/pwd_ensure_btn"
             android:layout_marginLeft="@dimen/dp_five"
-            android:textSize="@dimen/sp_forteen"
+            android:textSize="@dimen/sp_sixteen"
             android:background="@drawable/btn_special_bg"
             android:layout_width="@dimen/dp_sixty_three"
             android:layout_height="@dimen/dp_thirty"

@@ -32,6 +32,7 @@
         android:layout_marginRight="@dimen/dp_five"
         android:textColor="#333333"
         android:layout_centerVertical="true"
+        android:textStyle="bold"
         android:layout_toLeftOf="@+id/modify_upate_img"
         android:layout_toRightOf="@+id/modify_delete_img"/>
 

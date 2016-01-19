@@ -6,6 +6,7 @@
     android:paddingRight="@dimen/dp_sixteen"
     android:layout_height="match_parent">
     <RelativeLayout
+        android:layout_marginTop="@dimen/dp_three"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -16,8 +17,8 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/sp_eighteen"
             android:layout_marginRight="@dimen/dp_five"
-            android:textColor="#231815"
             android:textStyle="bold"
+            android:textColor="#231815"
             android:text="卡拉雞翅煲 不加洋蔥"/>
         <TextView
             android:layout_alignParentRight="true"
@@ -29,6 +30,7 @@
             android:text="X2"/>
     </RelativeLayout>
     <TextView
+        android:layout_marginTop="@dimen/dp_two"
         android:textColor="#4d4d4d"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +38,6 @@
         android:layout_marginLeft="@dimen/dp_nineteen"
         android:layout_marginRight="@dimen/dp_nineteen"
         android:lineSpacingMultiplier="1.1"
-        android:layout_marginTop="@dimen/dp_seven"
         android:text="少冰少糖 +珍珠"
         android:id="@+id/order_item_proInfo"/>
 

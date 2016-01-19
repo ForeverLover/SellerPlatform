@@ -2,17 +2,16 @@ package com.templar.sellerplatform.ui.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.templar.sellerplatform.R;
 import com.templar.sellerplatform.entity.Order;
-import com.templar.sellerplatform.ui.adapter.base.BaseRecyclerAdapter;
 import com.templar.sellerplatform.utils.StringUtils;
 import com.templar.sellerplatform.widget.CustomListView;
 
@@ -21,38 +20,52 @@ import java.util.List;
 /**
  * 项目:SellerPlatform
  * 作者：Hi-Templar
- * 创建时间：2015/12/19 14:15
- * 描述：
+ * 创建时间：2015/12/17 17:32
+ * 描述:
  */
-public class OrderRecyclerAdapter extends BaseRecyclerAdapter<RecyclerView.ViewHolder, Order> {
+public class OrderAdapter extends BaseAdapter{
     private Context mContext;
     private List<Order> orderList;
+    private LayoutInflater mInflater;
     private OrderProductAdapter adapter;
-
-    public OrderRecyclerAdapter(List<Order> listData, Context mContext) {
-        super(listData);
+    public OrderAdapter(Context mContext, List<Order> orderList) {
         this.mContext = mContext;
+        this.orderList = orderList;
+        mInflater=LayoutInflater.from(mContext);
     }
 
     @Override
-    public RecyclerView.ViewHolder onRealCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.order_item_layout,
-                parent, false);
-        return new ViewHolder(v);
+    public int getCount() {
+        return orderList.size();
     }
 
     @Override
-    public void onRealBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
-        super.onRealBindViewHolder(viewHolder, position);
+    public Order getItem(int position) {
+        return orderList.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder=null;
+        if (convertView==null){
+            convertView=mInflater.inflate(R.layout.order_item_layout,null);
+            holder=new ViewHolder(convertView);
+            convertView.setTag(holder);
+        }else{
+            holder= (ViewHolder) convertView.getTag();
+        }
         final Order order = getItem(position);
         if (order != null) {
-
-            ViewHolder holder = (ViewHolder) viewHolder;
             holder.order_addr_tv.setText(order.getOrderAddr());
             holder.order_remark_tv.setText(order.getOrderRemark());
             holder.order_item_orderNo.setText(order.getOrderNo());
             holder.order_item_type.setText(order.getOrderType());
-            holder.order_item_buyerTime.setText(order.getBuyerName() + " - " + StringUtils.getTweenTime(order.getOrderTime(),mContext));
+            holder.order_item_buyerTime.setText(order.getBuyerName() + " - " + StringUtils.getTweenTime(order.getOrderTime(), mContext));
             holder.order_item_totalPrice.setText(order.getOrderPrice() + mContext.getString(R.string.unit_yuan_text));
             if (order.getProductList() != null && !order.getProductList().isEmpty()) {
                 adapter = new OrderProductAdapter(order.getProductList(), mContext);
@@ -109,9 +122,10 @@ public class OrderRecyclerAdapter extends BaseRecyclerAdapter<RecyclerView.ViewH
                 }
             });
         }
+        return convertView;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder{
         @ViewInject(R.id.order_item_orderNo)
         private TextView order_item_orderNo;
         @ViewInject(R.id.order_item_buyerTime)
@@ -134,12 +148,7 @@ public class OrderRecyclerAdapter extends BaseRecyclerAdapter<RecyclerView.ViewH
         private CustomListView order_product_lv;
 
         public ViewHolder(View itemView) {
-            super(itemView);
             ViewUtils.inject(this, itemView);
         }
-
-
     }
-
-
 }
