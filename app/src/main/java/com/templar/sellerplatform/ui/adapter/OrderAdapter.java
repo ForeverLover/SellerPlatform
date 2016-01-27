@@ -58,6 +58,8 @@ public class OrderAdapter extends BaseAdapter{
             convertView.setTag(holder);
         }else{
             holder= (ViewHolder) convertView.getTag();
+            holder.order_item_commonOp.setVisibility(View.GONE);
+            holder.order_item_specialOp.setVisibility(View.GONE);
         }
         final Order order = getItem(position);
         if (order != null) {
@@ -107,6 +109,12 @@ public class OrderAdapter extends BaseAdapter{
                     holder.order_item_specialOp.setVisibility(View.VISIBLE);
                     holder.order_item_decline.setText(mContext.getString(R.string.order_decline_prefix).concat(order.getRemainingTime()).concat(mContext.getString(R.string.order_decline_suffix_minute)));
                     holder.order_item_decline.setVisibility(View.VISIBLE);
+                    break;
+                case 5:
+                    holder.order_item_commonOp.setText(mContext.getString(R.string.order_state_finished));
+                    holder.order_item_commonOp.setTextColor(Color.parseColor("#fdfdfd"));
+                    holder.order_item_commonOp.setBackgroundResource(R.drawable.btn_light_gray_bg);
+                    holder.order_item_commonOp.setVisibility(View.VISIBLE);
                     break;
             }
             holder.order_item_commonOp.setOnClickListener(new View.OnClickListener() {
